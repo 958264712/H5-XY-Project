@@ -1,0 +1,431 @@
+
+body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {margin:0; padding:0; border:0; list-style:none;}
+/*全局控制*/
+body{font-family:Arial, Helvetica, sans-serif,"宋体"; font-size:12px;}
+/*未点击和点击后的样式*/
+a:link,a:visited,a{color:#222;text-decoration:none;}
+a{color: #fff;}
+/*鼠标移上时的样式*/                                               
+a:hover{color:#ee3350;cursor: pointer;}  
+body {
+  background-color: #faf9f9;
+}
+.allWrap .head {
+  margin: 0 auto;
+}
+.allWrap{
+  padding: 0 5%;
+  margin: 0 auto;
+}
+.home{
+  height: auto;
+	position:relative;
+}
+.home #list{
+	position:absolute;
+	left:-1px;
+	top:30px;
+	display:none;
+	z-index:9999;
+}
+.home #list a{
+	text-align:center;
+	display:inline-block;
+}
+.home em{ 
+	width:6px; 
+	height:5px;
+	margin:15px 6px 0 6px;
+	display:inline;
+}
+.home #list a:hover{color: #ec6666;}
+.allWrap .head .logoWrap .btns a:hover{color: #ec6666;}
+.allWrap .head .logoWrap {
+  /* width: 1200px; */
+  /* padding: 0 5%; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  font-size: 14px;
+}
+.allWrap .head .logoWrap .logo img {
+  width: 300px;
+  height: 100px;
+}
+.allWrap .head .logoWrap .btns {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.allWrap .head .logoWrap .btns a {
+  margin: 0 10px;
+  padding: 10px 12px;
+  background-color: #006CAC;
+  color: white;
+  border-radius: 3px;
+}
+.allWrap .content {
+  background-color: white;
+  box-shadow: 0 0 10px #cecdcd;
+  border-radius: 10px;
+  /* width: 1170px; */
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.allWrap .content .nav {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #006CAC;
+}
+.allWrap .content .nav li {
+  padding: 15px 30px;
+  font-weight: bold;
+}
+.banner{
+ 	height:500px;
+ 	margin:13px auto 15px auto;
+ 	position:relative;
+ 	overflow:hidden;
+ }
+.banner .banner_pic .pic{display:none;}
+.banner .banner_pic .current{display:block;}
+.banner ol{
+	position:absolute;
+	left:calc(50% - 44px);
+	bottom:47px;
+ }
+.banner ol .but{
+ 	float:left;
+	width:10px;
+	height:10px;
+	margin-right:12px;
+	background:#fff;
+	opacity:0.5;
+	border-radius:50%;
+ }
+.banner ol li{cursor:pointer;}
+.banner ol .current{
+	color:#fff;
+	background:#ee3350;
+	float:left;
+	width:10px;
+	height:10px;
+	margin-right:12px;
+	text-align:center;
+	line-height:22px;
+	font-size:14px;
+	font-weight:bold;
+	border-radius:50%;
+}
+.pic{
+	width: 100%;
+}
+.current img{
+	width: 100%;
+	height: 100%;
+}
+.pic img{
+	width: 100%;
+	height: 100%;
+}
+.allWrap .content .nav li a:hover{
+  color: #ec6666;
+}
+.allWrap .content .nav li:first-child {
+  background-color: #006CAC;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+.allWrap .content .banner1 {
+  width: 100%;
+  margin: 10px 0;
+}
+.allWrap .content .banner1 img {
+  width: 100%;
+}
+.allWrap .content .chartWrap {
+  display: flex;
+  justify-content: space-between;
+}
+.allWrap .content .chartWrap .chartLeft {
+  width: 448px;
+  overflow: hidden;
+  height: 300px;
+}
+.allWrap .content .chartWrap .chartLeft .my-swiper {
+  position: relative;
+  width: 448px;
+  height: 300px;
+  overflow: hidden;
+}
+.allWrap .content .chartWrap .chartLeft .swiper-list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 896px;
+  height: 100%;
+  overflow: hidden;
+  animation: swiper 10s steps(1, end) infinite;
+  transition: left 1s linear;
+}
+.allWrap .content .chartWrap .chartLeft .swiper-slide {
+  width: 448px;
+  height: 100%;
+  float: left;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+.allWrap .content .chartWrap .chartLeft .swiper-slide a{
+  display: block;
+  height: 100%;
+}
+.allWrap .content .chartWrap .chartLeft .swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  transition: all 0.4s;
+}
+
+@keyframes swiper {
+  0%,
+  100% {
+    from: 0;
+  }
+  50% {
+    to: -448px;
+  }
+}
+
+
+.allWrap .content .chartWrap .chartLeft h3 {
+  color: #006CAC;
+  font-weight: bold;
+  margin: 5px;
+}
+.allWrap .content .chartWrap .chartLeft img {
+  width: 100%;
+  height: 100%;
+}
+.allWrap .content .chartWrap .textRight {
+  padding-left: 10px;
+  width: 670px;
+}
+.allWrap .content .chartWrap .textRight .title {
+  border-bottom: 2px solid #006CAC;
+}
+.allWrap .content .chartWrap .textRight .title h3 {
+  color: #006CAC;
+  font-weight: bold;
+  margin: 5px;
+}
+.allWrap .content .chartWrap .textRight .text {
+  padding-left: 20px;
+}
+.allWrap .content .chartWrap .textRight .text h2 {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px 0;
+}
+.allWrap .content .chartWrap .textRight .text  >p {
+  font-size: 14px;
+  color: #999;
+  border-bottom: 1px dashed #999;
+  line-height: 22px;
+}
+.allWrap .content .chartWrap .textRight ul {
+  margin-top: 20px;
+  list-style: disc !important;
+  color: #999;
+  padding-left: 20px;
+}
+.allWrap .content .chartWrap .textRight ul li {
+  color: #999;
+  padding: 8px 0;
+  height: 18px;
+}
+.allWrap .content .chartWrap .textRight ul li span:hover,
+.allWrap .content .chartWrap .textRight ul li p:hover {
+  color: #006CAC;
+}
+.allWrap .content .chartWrap .textRight ul li p {
+  font-size: 16px;
+  color: #666;
+  float: left;
+}
+.allWrap .content .chartWrap .textRight ul li span {
+  float: right;
+}
+.allWrap .content .chartWrap .textRight .btn {
+  float: right;
+  font-size: 14px;
+  color: #999999;
+}
+.allWrap .content .scrollText {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.allWrap .content .scrollText .section1 {
+  width: 32%;
+}
+.allWrap .content .scrollText .section1 .title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #006CAC;
+  padding: 10px 0;
+}
+.allWrap .content .scrollText .section1 .title span:nth-child(1) {
+  color: #006CAC;
+  font-weight: bold;
+}
+.allWrap .content .scrollText .section1 .title span {
+  color: #999999;
+}
+.allWrap .content .scrollText .section1 ul {
+  list-style: disc;
+  color: #999;
+  padding: 0 20px;
+}
+.allWrap .content .scrollText .section1 ul li {
+  font-size: 14px;
+  line-height: 24px;
+}
+.allWrap .content .scrollText .section1 ul li a:hover {
+  color: #ec6666;
+}
+.allWrap .content .scrollText .section2 {
+  width: 32%;
+}
+.allWrap .content .scrollText .section2 .title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #006CAC;
+  padding: 10px 0;
+}
+.allWrap .content .scrollText .section2 .title span:nth-child(1) {
+  color: #006CAC;
+  font-weight: bold;
+}
+.allWrap .content .scrollText .section2 .title span {
+  color: #999999;
+}
+.allWrap .content .scrollText .section2 .scroll ul {
+  list-style: disc;
+  color: #999;
+  padding: 0 20px;
+  }
+.allWrap .content .scrollText .section2 .scroll ul li {
+  font-size: 14px;
+  line-height: 24px;
+}
+.allWrap .content .scrollText .section2 .scroll ul li a:hover {
+  color: #ec6666;
+}
+.allWrap .content .avatars {
+  margin: 0 auto;
+  overflow: hidden;
+}
+.allWrap .content .avatars h3 {
+  color: #006CAC;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.allWrap .content .avatars .imgs {
+  font-size: 12px;
+  color: #000;
+  display: inline-block;
+  white-space: nowrap;
+  
+}
+.allWrap .content .avatars .imgs .imgWrap {
+  display: inline-block;
+}
+.allWrap .content .avatars .imgs img {
+  width: 122px;
+  height: 162px;
+  margin: 0 20px;
+}
+
+.allWrap .content .vip {
+  width: 1170px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.allWrap .content .vip h3 {
+  color: #006CAC;
+  font-weight: bold;
+  margin: 15px 0;
+}
+.allWrap .content .vip .imgs {
+  font-size: 12px;
+  color: #000;
+  display: inline-block;
+   margin-left: 90px;
+  
+}
+.allWrap .content .vip .imgs img {
+  width: 191px;
+  height: 74px;
+  margin: 0 20px;
+  border: 1px solid #999;
+  padding: 5px;
+}
+
+.allWrap .content footer {
+  display: block;
+  text-align: center;
+  border-top: 2px solid #006CAC;
+  font-size: 14px;
+  padding-bottom: 20px;
+  margin-top: 30px;
+}
+.allWrap .content footer > p {
+  line-height: 30px;
+}
+.allWrap .content footer .info {
+  display: flex;
+  width: 800px;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+  margin: 0 auto;
+}
+.allWrap .content footer .email {
+  margin: 5px;
+}
+.allWrap .content footer .email a {
+  color: #006CAC;
+}
+div, p, ul, li,section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+ul {
+  list-style: none;
+}
+a{
+  text-decoration: none;
+  color: #333;
+}
+/* sidebar */
+#sidebar{
+	position: fixed;
+	width: 50px;
+	height: 50px;
+	top: calc(50% - 25px);
+	right: 0;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	line-height: 50px;
+	background-color:#006CAC ;
+	display: none;
+	cursor: pointer;
+}

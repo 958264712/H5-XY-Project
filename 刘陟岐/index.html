@@ -1,0 +1,262 @@
+<!-- <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %> -->
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="电影、电视剧、搞笑动漫、动画" />
+    <meta name="description" content="国内最大的电影交流交流平台">
+    <title>首页</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="./javascript/jquery.js"></script>
+    <link href="css/index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="javascript/index.js"></script>
+    </style>
+
+</head>
+
+<body>
+    <!--top begin-->
+    <header class="p-3 border-bottom container">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-between justify-content-lg-between">
+                <a href="/" class="d-flex col-md-4 col-12 mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="images/logo.jpg" >
+                </a>
+                <div style="display: flex;align-items: center;" class="searchBox col-md-9  col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
+                    <form role="search">
+                        <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
+                    </form>
+                    <div id="test" class="home">
+                        <span></span>
+                        <a href="#">我的关注</a>
+                        <em></em>
+                        <div id="list">
+                            <a href="#">收藏的牛人</a>
+                            <a href="#">收藏的作品</a>
+                        </div>
+                        
+                    </div>
+                    <div id="lx" class="fav">
+                        <span></span>
+                        <a href="#">联系客服</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!--top end-->
+    <!--nav begin-->
+    <div class="nav container">
+        <div class="nav_con">
+            <ul class="row">
+                <li class="col-2">
+                    <a href="#" class="no1 choose">首页</a>
+                    <a href="#" class="no2">首页</a>
+                </li>
+                <li class="col-2">
+                    <a class="no1">电影</a>
+                    <a class="no2">电影</a>
+                </li>
+                <li class="col-2">
+                    <a class="no1">电视剧</a>
+                    <a class="no2">电视剧</a>
+                </li>
+                <li class="col-2">
+                    <a class="no1">动漫</a>
+                    <a class="no2">动漫</a>
+                </li>
+                <li class="col-2">
+                    <a class="no1">体育平台</a>
+                    <a class="no2">体育平台</a>
+                </li>
+                <li class="col-2">
+                    <a class="no1">搞笑动画</a>
+                    <a class="no2">搞笑动画</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--nav end-->
+    <!--banner begin-->
+    <div class="banner container">
+        <div class="banner_pic" id="banner_pic">
+            <div class="current"><img src="images/01.jpg" alt="" /></div>
+            <div class="pic"><img src="images/02.jpg" alt="" /></div>
+            <div class="pic"><img src="images/03.jpg" alt="" /></div>
+            <div class="pic"><img src="images/04.jpg" alt="" /></div>
+        </div>
+        <ol id="button">
+            <li class="current"></li>
+            <li class="but"></li>
+            <li class="but"></li>
+            <li class="but"></li>
+        </ol>
+    </div>
+    <!--banner end-->
+    <!--stages begin-->
+    <div class="stages container row">
+        <div class="stages_title  col-2 col-lg-2 col-md-2 ">通知公告</div>
+        <div class="stages_con col-10  col-lg-10 col-md-10 ">
+            <marquee>
+                <ul>
+                    <li><a href="#">【活动资讯】2020年评论大赛北京赛区报名开始</a></li>
+                    <li><a href="#">【奖品公告】2019年获奖名单点击查看！！！</a></li>
+                </ul>
+            </marquee>
+        </div>
+    </div>
+    <!--stages end-->
+    <!--content begin-->
+    <div class="content container">
+        <div class="line1 container row">
+            <!--left begin-->
+            <div class="left col-lg-5">
+                <div class="module">
+                    <div class="title">
+                        <div class="title_left"></div>
+                        <div class="title_right">
+                            <span></span>电影片段展示
+                            <a href="#" class="tittle_mark">more»</a>
+                        </div>
+                        <div class="title_bottom"></div>
+                    </div>
+                    <video src="video/pian.mp4" controls autoplay muted></video>
+                </div>
+                <div class="job">
+                    <div class="job_title">
+                        <span></span>招聘信息
+                        <a href="#" class="tittle_mark">more»</a>
+                    </div>
+                    <div class="job_con">
+                        <ul>
+                            <li><span></span><a href="#">评论网站招聘UI设计</a></li>
+                            <li><span></span><a href="#">评论网站招聘前端工程师</a></li>
+                            <li><span></span><a href="#">电影评论网站招聘UI设计实习生</a></li>
+                            <li><span></span><a href="#">电影评论招聘JS前端工程师</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--left end-->
+            <!--center begin-->
+            <div class="center col-lg-5">
+                <div class="message">
+                    <div class="message_title">
+                        <ol id="m_essage">
+                            <li class="current"><a href="#">评论专区</a></li>
+                            <li><a href="#">作品展示</a></li>
+                        </ol>
+                        <a href="#" class="tittle_mark tittle_mark1">more»</a>
+                    </div>
+                    <div id="message_con">
+                        <dl class="current row">
+                            <dt class="message_left col-md-3"></dt>
+                            <dd class="message_right col-md-9">
+                                <ul class="left_ul">
+                                    <li><span></span><a href="list.jsp">复仇者联盟电影的评论</a></li>
+                                    <li><span></span><a href="list.jsp">侏罗纪公园电影的评论</a></li>
+                                    <li><span></span><a href="list.jsp">流浪地球二电影的评论</a></li>
+                                    <li><span></span><a href="list.jsp">封神电影的评论与星评</a></li>
+                                    <li><span></span><a href="list.jsp">建国大业电影的评论</a></li>
+                                </ul>
+                                <ul class="right_ul">
+                                    <li><a href="#">2020/06</a></li>
+                                    <li><a href="#">2020/06</a></li>
+                                    <li><a href="#">2020/06</a></li>
+                                    <li><a href="#">2020/06</a></li>
+                                    <li><a href="#">2020/07</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                        <dl class="row">
+                            <dt class="message_left1"></dt>
+                            <dd class="message_right">
+                                <ul class="left_ul">
+                                    <li><span></span><a href="#">湖国山色艺术海报，领略自然风光-吃瓜群众</a></li>
+                                    <li><span></span><a href="#">湖国山色艺术海报，领略自然风光-吃瓜群众</a></li>
+                                    <li><span></span><a href="#">湖国山色艺术海报，领略自然风光-吃瓜群众</a></li>
+                                    <li><span></span><a href="#">湖国山色艺术海报，领略自然风光-吃瓜群众</a></li>
+                                    <li><span></span><a href="#">湖国山色艺术海报，领略自然风光-吃瓜群众</a></li>
+                                </ul>
+                                <ul class="right_ul">
+                                    <li><a href="#">2020/07</a></li>
+                                    <li><a href="#">2020/07</a></li>
+                                    <li><a href="#">2020/06</a></li>
+                                    <li><a href="#">2020/07</a></li>
+                                    <li><a href="#">2020/06</a></li>
+                                </ul>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="teacher">
+                    <div class="teacher_title">
+                        <span></span>作品欣赏
+                        <a href="#" class="tittle_mark">more»</a>
+                    </div>
+                    <div class="teacher_con">
+                        <ul class="row">
+                            <li class="col-md-3 col-6">
+                                <div><a href="#"><img src="images/teacher01.gif" /></a></div>
+                                <div class="name"><a href="#">隔夜饭</a></div>
+                            </li>
+                            <li class="col-md-3 col-6">
+                                <div><a href="#"><img src="images/teacher02.gif" /></a></div>
+                                <div class="name"><a href="#">好尴尬</a></div>
+                            </li>
+                            <li class="col-md-3 col-6">
+                                <div><a href="#"><img src="images/teacher03.gif" /></a></div>
+                                <div class="name"><a href="#">yjkk</a></div>
+                            </li>
+                            <li class="col-md-3 col-6">
+                                <div><a href="#"><img src="images/teacher04.gif" /></a></div>
+                                <div class="name"><a href="#">风光</a></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--center end-->
+            <!--right begin-->
+            <div class="right col-lg-2">
+                <div class="course">
+                    <h3>评论区专区<span>Tool selection</span></h3>
+                    <ul>
+                        <li><span></span><a href="#">评论</a></li>
+                        <li class="course_2"><span></span><a href="#">评论与星评</a></li>
+                        <li class="course_3"><span></span><a href="#">评论与星评</a></li>
+                        <li class="course_4"><span></span><a href="#">评论与星评</a></li>
+                        <li class="course_5"><span></span><a href="#">评论与星评</a></li>
+                    </ul>
+                </div>
+
+                <!--right end-->
+
+                <!-- data end -->
+                <!-- book begin -->
+
+                <!-- book end -->
+
+
+                <!--content end-->
+                <!--footer begin-->
+
+                <div class="footer_con">
+                    <p>版权所有 2023-2023 future</p>
+                    <p>地址：吉林省吉林市 邮编：100096</p>
+                    <p>电话：15293172152 传真：010-829322222邮箱: haiqu@it.com</p>
+                </div>
+
+                <!--footer begin-->
+            </div>
+        </div>
+    </div>
+    <!--content end-->
+    <!-- sidebar -->
+    <div id="sidebar">
+        TOP
+    </div>
+</body>
+
+</html>
