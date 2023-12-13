@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- CSS -->
+    <link
+      href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/4.6.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+	 <link href="https://unpkg.com/layui@2.9.1/dist/css/layui.css" rel="stylesheet">
+	<!-- <link href="./laydate/layui.css" rel="stylesheet"> -->
+    <script src="./echart.js"></script>
+    <!-- <script src="./laydate/layui.js"></script>
+    <script src="./laydate/laydate.js"></script> -->
+    <title>Document</title>
+
+  </head>
+
+  <body>
+    <div >
+      <header></header>
+      <main >
+        <div
+          class="model1 "
+        >
+          <div class="modelItems ">
+            <div class="itemClass">
+              <div class="title">国家／地区情况</div>
+              <div class=" " id="county"></div>
+            </div>
+            <div class="itemClass">
+              <div class="title">经济总量及采购趋势</div>
+              <div class="text">
+                <div class="money">金额</div>
+                <div class="long">增长率</div>
+              </div>
+              <div class="echartsM" id="moneyCount"></div>
+            </div>
+            <div class="itemClass">
+              <div class="title">国防部部门装备采购占比</div>
+              <div class="echartsM" id="payPrecent"></div>
+            </div>
+          </div>
+          <div class="model1_content">
+            <div class="map" id="map">
+              <div class="tobig" id="tobig" onclick="tobig()">
+                <img src="./image/ic-zhankai.svg" />
+              </div>
+              <div class="tobig" id="suoxiao" onclick="suoxiao()">
+                <img src="./image/ic-shouqi.svg" />
+              </div>
+              <div class="xing">
+                <img src="./image/ic-star.png" />
+                <img src="./image/ic-star.png" />
+                <img src="./image/ic-star.png" />
+                <img src="./image/ic-star.png" />
+              </div>
+              <div class="project">
+                <p><img src="./image/ic-1.png" />问题项目</p>
+                <p><img src="./image/ic-2.png" />正常项目</p>
+              </div>
+			  <i class="ic-1 ic"></i>
+			  <i class="ic-2 ic"></i>
+            </div>
+            <div class="Report" id="Report">
+              <div class="Re_top">
+                缅甸联邦共和国市场分析报告：<a><span></span>下载PDF</a>
+              </div>
+              <div class="Re_list">
+                <div class="listItem">
+                  <img src="./image/ic-mianji.png" />
+                  <div>
+                    <span>面积</span>
+                    <p>676.856平方公里</p>
+                  </div>
+                </div>
+                <div class="listItem">
+                  <img src="./image/ic-zhuyaochengshi.png" />
+                  <div>
+                    <span>主要城市</span>
+                    <p>内比都仰光曼德勒等</p>
+                  </div>
+                </div>
+                <div class="listItem">
+                  <img src="./image/ic-guojiayuanshou.png" />
+                  <div>
+                    <span>国家元首</span>
+                    <p>敏昂莱</p>
+                  </div>
+                </div>
+                <div class="listItem">
+                  <img src="./image/ic-renkou.png" />
+                  <div>
+                    <span>人口</span>
+                    <p>5.458万</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="TopItem" id="TopItem">
+              <div class="itemClass">
+                <div class="title">客户采购金额TOP5（万美元）</div>
+                <div class="echartsM Progress">
+                  <ul>
+                    <li>
+                      <p style="color: #6b7680">客户1</p>
+                      <div class="one"></div>
+                      <p>88</p>
+                    </li>
+                    <li>
+                      <p style="color: #6b7680">客户2</p>
+                      <div class="two"></div>
+                      <p>68</p>
+                    </li>
+                    <li>
+                      <p style="color: #6b7680">客户3</p>
+                      <div class="three"></div>
+                      <p>66</p>
+                    </li>
+                    <li>
+                      <p style="color: #6b7680">客户4</p>
+                      <div class="four"></div>
+                      <p>12</p>
+                    </li>
+                    <li>
+                      <p style="color: #6b7680">客户5</p>
+                      <div class="four"></div>
+                      <p>12</p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="itemClass">
+                <div class="title">畅销产品TOP5（万美元）</div>
+                <div class="echartsM" id="product"></div>
+              </div>
+            </div>
+          </div>
+          <div class="modelItems">
+            <div class="itemClass">
+              <div class="tab_list">
+                <ul id="tab_ul">
+                  <li class="active">出访到访情况</li>
+                  <li>历次礼品</li>
+                  <li>关键人物喜好记录</li>
+                </ul>
+              </div>
+              <div class="tab_con" id="tab_con">
+                <div class="item" style="display: block" id="wrapper1">
+                  <ul id="content1">
+                    <li>
+                      2021年，出访仰光会见苏珊昂及部长，售后服务历次招待情况
+                    </li>
+                    <li>2021年，接待苏珊昂及部长，考察产品</li>
+                    <li>2022年，接待伯恩来，产品验收历次礼品</li>
+                    <li>2021年，苏珊昂及，部长，瓷器</li>
+                    <li>2022年，伯恩来，部长，纪念品</li>
+                    <li>
+                      2021年，出访仰光会见苏珊昂及部长，售后服务历次招待情况
+                    </li>
+                    <li>2021年，接待苏珊昂及部长，考察产品</li>
+                    <li>2022年，接待伯恩来，产品验收历次礼品</li>
+                    <li>2021年，苏珊昂及，部长，瓷器</li>
+                    <li>2022年，伯恩来，部长，纪念品</li>
+                    <li>
+                      2021年，出访仰光会见苏珊昂及部长，售后服务历次招待情况
+                    </li>
+                    <li>2021年，接待苏珊昂及部长，考察产品</li>
+                    <li>2022年，接待伯恩来，产品验收历次礼品</li>
+                    <li>2021年，苏珊昂及，部长，瓷器</li>
+                    <li>2022年，伯恩来，部长，纪念品</li>
+                    <li>
+                      2021年，出访仰光会见苏珊昂及部长，售后服务历次招待情况
+                    </li>
+                    <li>2021年，接待苏珊昂及部长，考察产品</li>
+                    <li>2022年，接待伯恩来，产品验收历次礼品</li>
+                    <li>2021年，苏珊昂及，部长，瓷器</li>
+                    <li>2022年，伯恩来，部长，纪念品</li>
+                  </ul>
+                  <ul id="fakeContent1"></ul>
+                </div>
+                <div class="item">2</div>
+                <div class="item">3</div>
+              </div>
+            </div>
+            <div class="itemClass">
+              <div class="tab_list">
+                <ul id="tab_ul2">
+                  <li class="active">市场咨讯</li>
+                  <li>内参数据</li>
+                </ul>
+              </div>
+              <div class="tab_con" id="tab_con2">
+                <div class="item" style="display: block" id="wrapper">
+                  <ul style="padding: 0" id="content">
+                    <li>
+                      <span></span>
+                      最新：缅北局势恶化,上百辆中国货车被毁,解放军抵达边境,发出最强音
+                    </li>
+                    <li>
+                      <span></span
+                      >最新：缅北局势恶化,上百辆中国货车被毁,解放军抵达边境,发出最强音
+                    </li>
+                    <li>
+                      <span></span
+                      >最新：缅北局势恶化,上百辆中国货车被毁,解放军抵达边境,发出最强音
+                    </li>
+                    <li>
+                      <span></span
+                      >最新：缅北局势恶化,上百辆中国货车被毁,解放军抵达边境,发出最强音
+                    </li>
+                    <li>
+                      <span></span
+                      >最新：缅北局势恶化,上百辆中国货车被毁,解放军抵达边境,发出最强音
+                    </li>
+                  </ul>
+                  <ul style="padding: 0" id="fakeContent"></ul>
+                </div>
+                <div class="item">2</div>
+              </div>
+            </div>
+            <div class="itemClass">
+              <div class="title">当前概况</div>
+              <div class="echartsM Overview">
+                <div class="Ove_con" id="tab_con3">
+                  <div style="display: block">
+                    缅甸联邦共和国（英语：The Republic of the Union of
+                    Myanmar），简称缅甸（Myanmar），是东南亚的一个国家，也是东南亚国家联盟的成员国。西南临缅甸海，西北与印度和孟加拉国为邻，东北靠中国，东南接泰国与老挝，首都为内比都，人口5417万（2022年），共有135个民族，全国85%以上的人信奉佛教，全国分7个省、7个邦和联邦区。
+                    [2]
+                    缅甸1044年形成统一国家，先后经历了蒲甘王朝、东吁王朝和贡榜王朝。1824年至1885年间英国先后发动了三次英缅战争并占领了缅甸，1886年英国将缅甸划为英属印度的一个省。1948年1月脱离英联邦宣布独立，成立缅甸联邦。1974年1月改称缅甸联邦社会主义共和国。1988年9月，以国防部长苏貌为首的军人接管政权。1988年9月改名为“缅甸联邦”。2008年5月，新宪法规定实行总统制。2011年2月，缅甸国会选出登盛为缅甸第一任总统。2016年3月，缅甸联邦议会选出吴廷觉为半个多世纪以来缅甸首位民选非军人总统。
+                    [2]2021年2月1日，缅甸总统温敏、国务资政昂山素季及一些民盟高级官员被军方扣押。4月16日，缅甸联邦议会代表委员会宣布成立民族团结政府，温敏任总统。
+                    [45-46]
+                  </div>
+                  <div>2</div>
+                </div>
+                <div class="Ove_tab" id="tab_ul3">
+                  <p class="active">国防建设</p>
+                  <p>双边关系</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="model2">
+          <div class="implementation">执行情况</div>
+          <ul class="select">
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="Signing"
+                onclick="getValue()"
+              />签约：$1,000.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="take"
+                onclick="getValue()"
+              />生效：$1,002.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="send"
+                onclick="getValue()"
+              />发货：$1,004.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="deliver"
+                onclick="getValue()"
+              />交付：$0.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="Collection"
+                onclick="getValue()"
+              />收汇：$1,006.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="effect"
+                onclick="getValue()"
+              />签约未生效：$1,006.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="delivered"
+                onclick="getValue()"
+              />发货未交付：$1,006.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="unpaid"
+                onclick="getValue()"
+              />交付未收款：$1,006.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="payments"
+                onclick="getValue()"
+              />逾期未收款：$1,006.00万<span>|</span>
+            </li>
+            <li>
+              <input
+                type="radio"
+                name="money"
+                value="fully"
+                onclick="getValue()"
+              />在手合同未执行完：$1,006.00万
+            </li>
+          </ul>
+          <div class="check">
+            <div class="time">
+              <div class="year">
+                年份区间
+				<div class="layui-input-inline">
+        			<input type="text" class="layui-input" id="ID-laydate-range-year" placeholder="开始年份 - 结束年份">
+      			</div>
+              </div>
+              <div class="month">
+                年月
+                <div class="layui-input-inline">
+        			<input type="text" class="layui-input" id="ID-laydate-type-month" placeholder="请选择年月">
+      			</div>
+              </div>
+            </div>
+            <div class="switch" id="switch">
+              <span class="listform"></span>
+              <span class="listechart"></span>
+              <div>导出</div>
+            </div>
+          </div>
+          <div class="biao" id="biao">
+            <div class="tubiao" style="display: block">
+              <table class="biaoge">
+                <thead>
+                  <tr>
+                    <th>部门</th>
+                    <th>合同号 <img src="./image/ic-up.svg" />
+					</th>
+                    <th>合同名称</th>
+                    <th>国别/地区</th>
+                    <th>签约日期  <img src="./image/ic-do.svg" /></th>
+                    <th>签约美金（万美元） <img src="./image/ic-do.svg" />
+              			</th>
+					</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                  <tr>
+                    <td>AS2109014000194</td>
+                    <td><a>222222</a></td>
+                    <td>总部</td>
+                    <td>辜昌贞</td>
+                    <td>2007-11-13</td>
+                    <td>1,006.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tubiao">
+              <div class="type">
+                <div class="money">金额</div>
+                <div class="long">增长率</div>
+              </div>
+              <div class="echarts">
+                <div id="zhuzhuang"></div>
+                <div id="zhexian"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="./script.js"></script>
+	<script src="https://unpkg.com/layui@2.9.1/dist/layui.js"></script> 
+	<script>
+		layui.use(function(){
+			var laydate = layui.laydate;
+			// 年范围
+			laydate.render({
+				elem: '#ID-laydate-range-year',
+				type: 'year',
+				range: true
+			});
+			// 年月选择器
+			laydate.render({
+				elem: '#ID-laydate-type-month',
+				type: 'month'
+			});
+		})
+	</script>
+  </body>
+</html>

@@ -1,0 +1,619 @@
+@charset "utf-8";
+
+/* CSS Document */
+ul,
+li,
+h1,
+h2,
+h3,
+p,
+body,
+html {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #000
+}
+
+body,
+html {
+	width: 100%;
+	height: 100%;
+	background: #E3F1F8;
+}
+
+body::-webkit-scrollbar {
+	display: none;
+}
+
+header {
+	width: 100%;
+	height: 78px;
+	background-image: url("./image/头部.png");
+}
+
+main {
+	width: 100%;
+	height: calc(100% - 78px);
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+main::-webkit-scrollbar {
+	display: none;
+}
+
+/* 公共item样式 */
+.itemClass {
+	width: 455px;
+	height: 292px;
+	background-image: url('./image/kapian.png');
+	background-repeat: repeat;
+}
+
+.title {
+	height: 50px;
+	font-size: 18px;
+	font-family: PingFang SC, PingFang SC;
+	font-weight: 500;
+	line-height: 50px;
+	text-indent: 10px;
+}
+
+.tab_list {
+	height: 50px;
+	font-size: 16px;
+	font-family: PingFang SC, PingFang SC;
+	font-weight: 500;
+	line-height: 50px;
+	color: #193A49;
+}
+
+.tab_list ul {
+	display: flex;
+}
+
+.tab_list ul li {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.tab_list .active {
+	font-size: 18px;
+	border-bottom: 1px solid #1893CC;
+}
+
+.tab_con {
+	width: 100%;
+	height: calc(100% - 50px);
+}
+
+.tab_con .item {
+	display: none;
+	width: 100%;
+	height: 100%;
+	padding-top: 20px;
+	box-sizing: border-box;
+	overflow: hidden;
+}
+
+.tab_con .item ul {
+	width: 415px;
+	padding-left: 40px;
+	overflow: hidden;
+}
+
+.tab_con .item ul li {
+	list-style: circle;
+	color: #6B7680;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+
+.tab_con#tab_con2 .item {
+	padding-left: 20px;
+	padding-right: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.tab_con#tab_con2 .item ul li {
+	list-style: none;
+}
+
+.tab_con#tab_con2 .item ul li span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('./image/ic-fire.png') no-repeat;
+}
+
+.itemClass .text {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.itemClass .text>div {
+	position: relative;
+}
+
+.itemClass .text .money {
+	text-indent: 15px;
+}
+
+.itemClass .text .money::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #1494D4;
+	top: 10px;
+	left: 0px;
+}
+
+.itemClass .text .long::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #1494D4;
+	top: 14px;
+	left: -16px;
+}
+
+.itemClass .Overview {
+	width: 100%;
+	height: calc(100% - 50px);
+	padding-top: 20px;
+	padding-left: 20px;
+	box-sizing: border-box;
+	display: flex;
+}
+
+.itemClass .Overview .Ove_con {
+	width: 100%;
+	height: 204px;
+	overflow-y: scroll;
+}
+
+.itemClass .Overview .Ove_con>div {
+	width: 100%;
+	height: 100%;
+	display: none;
+}
+
+.itemClass .Overview .Ove_con::-webkit-scrollbar {
+	width: 5px;
+}
+
+.itemClass .Overview .Ove_con::-webkit-scrollbar-thumb {
+	background: #C1CCD3;
+}
+
+.itemClass .Overview .Ove_tab {
+	width: 25px;
+	height: 160px;
+	background: #F2F3F5;
+	writing-mode: sideways-rl;
+	margin: 0 10px;
+	padding: 5px;
+}
+
+.itemClass .Overview .Ove_tab p {
+	margin-bottom: 5px;
+	cursor: pointer;
+}
+
+.itemClass .Overview .Ove_tab .active {
+	background: #ffffff;
+	color: #1893CC;
+}
+
+.echartsM {
+	width: 100%;
+	height: 240px;
+}
+
+/* 公共item样式 end*/
+
+main .model1 {
+	width: 100%;
+	height: 966px;
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 0;
+	box-sizing: border-box;
+}
+
+main .model1 .modelItems {
+	width: 24%;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+main .model1 .model1_content {
+	width: 50%;
+	height: 936px;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: space-between;
+}
+
+main .model1 .model1_content .map {
+	width: 100%;
+	height: 430px;
+	background: url('./image/background_min.png');
+	border-radius: 10px;
+	position: relative;
+	text-align: center;
+	line-height: 55px;
+}
+
+main .model1 .model1_content .map .tobig {
+	width: 44px;
+	height: 44px;
+	line-height: 44px;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 43px 43px 43px 43px;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+main .model1 .model1_content .map .tobig#suoxiao {
+	display: none;
+}
+
+main .model1 .model1_content .map .xing {
+	width: 162px;
+	height: 44px;
+	background: rgba(255, 255, 255, 0.5);
+	border-radius: 43px 43px 43px 43px;
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+main .model1 .model1_content .map .xing img{
+	width: 30px;
+	height: 30px;
+}
+main .model1 .model1_content .map .project{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	font-size: 14px;
+	display: flex;
+	height: 44px;
+} 
+main .model1 .model1_content .map .project p{
+	margin-right: 10px;
+	line-height: 44px;
+}
+main .model1 .model1_content .map .project img{
+	width: 14px;
+	height: 14px;
+	margin-right: 5px;
+}
+main .model1 .model1_content .map .ic{
+	width: 42px;
+	height: 47px;
+	position: absolute;
+	z-index: 999;
+}
+main .model1 .model1_content .map .ic-1{
+	background-image: url('./image/ic-1.png');
+	top: calc(50% - 100px);
+	left: calc(50% - 100px);
+}
+main .model1 .model1_content .map .ic-2{
+	background-image: url('./image/ic-2.png');
+	top: calc(50% - 200px);
+	left: calc(50% - 200px);
+}
+
+
+
+main .model1 .model1_content .Report {
+	height: 169px;
+	width: 100%;
+	background-image: url('./image/bg.jpg');
+	padding: 0 30px;
+	box-sizing: border-box;
+}
+
+main .model1 .model1_content .Report .Re_top {
+	height: 60px;
+	width: 100%;
+	border-bottom: 1px solid #000;
+	line-height: 60px;
+	font-size: 18px;
+}
+
+main .model1 .model1_content .Report .Re_top a {
+	color: #1893CC;
+	cursor: pointer;
+}
+
+main .model1 .model1_content .Report .Re_top span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	background: url('./image/ic-down.svg') no-repeat;
+}
+
+main .model1 .model1_content .Report .Re_list {
+	width: 100%;
+	height: calc(100% - 61px);
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+main .model1 .model1_content .Report .Re_list .listItem {
+	display: flex;
+}
+
+main .model1 .model1_content .Report .Re_list .listItem img {
+	width: 50px;
+	height: 50px;
+	margin-right: 15px;
+}
+
+main .model1 .model1_content .Report .Re_list .listItem>div span {
+	display: block;
+	color: #929AA7;
+}
+
+main .model1 .model1_content .TopItem {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+.Progress ul {
+	width: 100%;
+	padding-left: 59px;
+	padding-top: 35px;
+}
+
+.Progress ul li {
+	display: flex;
+	font-size: 14px;
+	line-height: 14px;
+	margin-bottom: 16px;
+}
+
+.Progress ul li div {
+	width: 242px;
+	height: 12px;
+	background: #F2F4F7;
+	position: relative;
+	margin: 0 10px;
+}
+
+.Progress ul li .one::before {
+	content: "";
+	width: 162px;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: #E8684A;
+}
+
+.Progress ul li .two::before {
+	content: "";
+	width: 132px;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: #FFB264;
+}
+
+.Progress ul li .three::before {
+	content: "";
+	width: 92px;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: #1893CC;
+}
+
+.Progress ul li .four::before {
+	content: "";
+	width: 72px;
+	height: 12px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 9;
+	background-color: #1AC8FB;
+}
+
+
+.model2 {
+	width: 100%;
+	background: #fff;
+	border-radius: 10px;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+.model2 .implementation {
+	height: 50px;
+	line-height: 50px;
+}
+
+.model2 .select {
+	width: 70%;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.model2 .select li {
+	line-height: 30px;
+}
+
+.model2 .select li span {
+	margin: 0 15px;
+}
+
+.model2 .check {
+	display: flex;
+	justify-content: space-between;
+	line-height: 50px;
+}
+.model2 .check .time{
+	display: flex;
+	justify-content: space-between;
+}
+.model2 .check .time .year{
+	margin-right: 20px;
+}
+.model2 .check .switch {
+	display: flex;
+	align-items: center;
+}
+
+.model2 .check .switch span {
+	width: 24px;
+	height: 24px;
+	margin: 0 3px;
+}
+
+.listform {
+	background: url('./image/ic-biaoge.svg') no-repeat;
+}
+
+.listechart {
+	background: url('./image/ic-tubiao.svg') no-repeat;
+}
+
+.model2 .check .switch div {
+	width: 60px;
+	height: 32px;
+	color: #fff;
+	line-height: 32px;
+	background-color: #1893CC;
+	border-radius: 3px;
+	text-align: center;
+	margin-left: 10px;
+}
+
+.model2 .biao .tubiao {
+	display: none;
+	min-height: 240px;
+}
+
+.model2 .biao table {
+	width: 100%;
+	border-spacing: 0px
+}
+
+.model2 .biao table thead {
+	height: 48px;
+	line-height: 48px;
+	color: #333333;
+	font-size: 14px;
+	text-align: left;
+	background: #F2F4F7;
+}
+
+.model2 .biao table thead th,
+.model2 .biao table tbody td {
+	text-indent: 40px;
+}
+
+.model2 .biao table tbody {
+	height: 48px;
+	line-height: 48px;
+	color: #333333;
+	font-size: 14px;
+	text-align: left;
+}
+
+.model2 .biao table tr:nth-child(2n) {
+	background: #F5F7FA;
+}
+
+.model2 .biao table tbody td a {
+	color: #1893CC;
+	cursor: pointer;
+	text-decoration-line: underline;
+}
+
+.model2 .biao .tubiao {
+	width: 100%;
+	height: 100%;
+}
+
+.model2 .biao .tubiao .echarts {
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+
+.model2 .biao .tubiao .echarts>div {
+	width: 50%;
+	min-height: 240px;
+
+}
+
+.model2 .biao .tubiao .type {
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+	box-sizing: border-box;
+}
+
+
+.model2 .biao .tubiao .type>div {
+	position: relative;
+	width: 50%;
+}
+
+.model2 .biao .tubiao .type .money {
+	text-indent: 15px;
+}
+
+.model2 .biao .tubiao .type .money::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	background: #1494D4;
+	top: 10px;
+	left: 0px;
+}
+
+.model2 .biao .tubiao .type .long::before {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 2px;
+	background: #1494D4;
+	top: 14px;
+	left: -16px;
+}
