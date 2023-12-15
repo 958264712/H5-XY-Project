@@ -1,0 +1,25 @@
+body{
+	background-image: url('../images/bg2.jpg');
+	background-size: cover;
+}
+
+header {
+	margin-bottom: 0;
+}
+.part1{
+	margin: 0 auto;
+}
+.part1 .item{
+ font-size: 16px;
+ color: #fff;
+}
+.part1 .item h3{
+	height: 60px;
+}
+.part1 .item p{
+	text-indent: 2rem;
+}
+.part1 .item .coinType .specailImg img{
+	width: 105px;
+	height: 220px;
+}

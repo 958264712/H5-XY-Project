@@ -1,0 +1,48 @@
+
+    var imageindex = 0; //自动选择的索引
+    var imageCount = 0; //图片的数量
+    var IsAuto = true; //是否自动轮换图片
+    var LunHuanTimeSpan = 7000;
+    var IsStopLH;
+    $(function () {
+        imageCount = $("#ucCompanyMiniIcoDiv img").length; //图片的数量
+
+        $("#ucCompanyMiniIcoDiv img").mouseover(function () {
+            $("#ucCompanyShowIcoImg").attr("src", $(this).attr("src")); //设置选中的大图的路径
+            $("#ucCompanyMiniIcoDiv a").removeClass("current")//移除所有小图选中的样式
+            $(this).parent().addClass("current"); //添加单机的小图的样式
+            IsAuto = false; //移入暂停轮换
+        });
+
+        $("#ucCompanyMiniIcoDiv img").click(function () {
+            $("#ucCompanyShowIcoImg").attr("src", $(this).attr("src")); //设置选中的大图的路径
+            $("#ucCompanyMiniIcoDiv a").removeClass("current")//移除所有小图选中的样式
+            $(this).parent().addClass("current"); //添加单机的小图的样式
+        });
+
+        $("#ucCompanyMiniIcoDiv img").mouseout(function () {
+            IsAuto = true; //移出继续轮换
+        });
+        IsStopLH = setTimeout(AutoLunHuanImage, 100); //延时一定时间再加载，防止页面无图验证在后导致有一定时间显示是无图的图片
+        $("#ucCompanyShowIcoImg").hover(function () {
+            IsAuto = false;
+            clearTimeout(IsStopLH);
+        }, function () {
+            IsAuto = true;
+            IsStopLH = setTimeout(AutoLunHuanImage, LunHuanTimeSpan);
+        });
+    });
+
+    function AutoLunHuanImage() {
+        if (IsAuto && imageCount > 1) {
+            $("#ucCompanyMiniIcoDiv img").eq(imageindex).click();
+            if (imageindex >= imageCount - 1) {
+                imageindex = 0;
+            } else {
+                imageindex++;
+            }
+        }
+
+        IsStopLH = setTimeout(AutoLunHuanImage, LunHuanTimeSpan);
+    }
+    

@@ -35,6 +35,8 @@ header {
 	width: 100%;
 	height: 78px;
 	background-image: url("./image/头部.png");
+	background-repeat: no-repeat;
+	 background-size:100% 100%;
 }
 
 main {
@@ -50,10 +52,11 @@ main::-webkit-scrollbar {
 
 /* 公共item样式 */
 .itemClass {
-	width: 455px;
+	width: 100%;
 	height: 292px;
 	background-image: url('./image/kapian.png');
-	background-repeat: repeat;
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 }
 
 .title {
@@ -80,6 +83,10 @@ main::-webkit-scrollbar {
 
 .tab_list ul li {
 	margin-left: 20px;
+	height: 50px;
+	overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
 	cursor: pointer;
 }
 
@@ -103,7 +110,7 @@ main::-webkit-scrollbar {
 }
 
 .tab_con .item ul {
-	width: 415px;
+	width: 100%;
 	padding-left: 40px;
 	overflow: hidden;
 }
@@ -236,22 +243,25 @@ main .model1 {
 }
 
 main .model1 .modelItems {
-	width: 24%;
+	flex: 1;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
+	justify-content: center;
+
 }
 
 main .model1 .model1_content {
-	width: 50%;
 	height: 936px;
+	flex: 2;
 	display: flex;
 	flex-wrap: wrap;
 	align-content: space-between;
+	justify-content: center;
 }
 
 main .model1 .model1_content .map {
-	width: 100%;
+	width: 98%;
 	height: 430px;
 	background: url('./image/background_min.png');
 	border-radius: 10px;
@@ -329,8 +339,10 @@ main .model1 .model1_content .map .ic-2{
 
 main .model1 .model1_content .Report {
 	height: 169px;
-	width: 100%;
+	width: 98%;
 	background-image: url('./image/bg.jpg');
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
 	padding: 0 30px;
 	box-sizing: border-box;
 }
@@ -379,7 +391,7 @@ main .model1 .model1_content .Report .Re_list .listItem>div span {
 }
 
 main .model1 .model1_content .TopItem {
-	width: 100%;
+	width: 98%;
 	display: flex;
 	justify-content: space-between;
 }
