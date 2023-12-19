@@ -3,15 +3,18 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
+  position: relative;
   /* 渐变背景 */
   background: linear-gradient(20deg, #e3eeff, #f3e7e9);
 }
 .heart {
   width: 280px;
   height: 220px;
+  position: absolute;
+  top: calc(50% - 140px);
+  left: calc(50% - 110px);
   display: flex;
   justify-content: space-between;
-  border: 1px solid red;
 }
 .heart span {
   --c: plum;
@@ -23,6 +26,8 @@ body {
   position: relative;
   height: var(--h);
   top: var(--t);
+}
+.heart:hover span{
   animation: beating 1s infinite;
 }
 .heart span:nth-child(1),
