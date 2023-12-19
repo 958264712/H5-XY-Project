@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta name="viewport" content="width=750,user-scalable=no,target-densityDpi=device-dpi">
+    <title>万事如意</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/jquery.2.2.4.js"></script>
+    <script src="../js/html2canvas.js"></script>
+    <script src="../js/my.js"></script>
+</head>
+<body>
+    <div class="posterbg" style="background-image:url('img/ex_副本/5.png');">
+          <a href="index.html" class="return" style='position: absolute;left:3%;top:3%;transform: translate(-3%,3%);font-size:36px;color:#000;'>返回重选</a>
+         <input id="toname" style="position: absolute;left:50%;top:68%;transform: translate(-50%,24%);font-size:24px;" placeholder="发送对象(可不输入,4字以内)">
+		
+       <!-- <input id="uname" style="top:21rem;left:12rem;color:#000;font-size:24px" placeholder="请输入您的姓名" /> -->
+	   <input id="uname" style="position: absolute;left:50%;top:74%;transform: translate(-50%,24%);font-size:24px;"placeholder="署名(可不输入,4字以内)" >
+		<!-- <select id="fonting" style="position: absolute;left:50%;top:30%;transform: translate(-50%,30%);font-size:24px;color:#000;font-family:'HYYanKaiJ';">
+			  <option value="HYYanKaiJ" style="font-family:'HYYanKaiJ'" >字体选择：默认</option>
+			<option value="HYYanKaiJ" style="font-family:'HYYanKaiJ'">颜体</option>
+			  <option value="fangzhengyingbikaishu" style="font-family:'fangzhengyingbikaishu'">楷体</option>
+		    <option value="STLITI" style="font-family:'STLITI'">隶书</option>
+		    <option value="STXINGKA" style="font-family:'STXINGKA'">行书</option>    								
+		</select>
+		<select id="coloring" style="position: absolute;left:50%;top:36%;transform: translate(-50%,36%);font-size:24px">
+		    <option value="#fcf3d9">文字颜色：默认</option>
+		    <option value="#fff">白色</option>
+		    <option value="#fde5cd">米色</option>
+		    <option value="#8a4400">棕色</option>
+		    <option value="#8a2a00">褐色</option>	
+		</select> -->
+        <a href="javascript:;" id="btngenerate" style="position: absolute;left:50%;top:80%;transform: translate(-50%,43%);"></a>
+    </div>
+
+    <div id="view" class="poster">
+        <div id='poster' class="section">
+            <img class="posterimg" src="img/images_副本/1.gif)" alt="">
+			<div class="zhuyuan" style="top: 8rem; left:5rem;color: #fcf3d9;writing-mode: lr;line-height:0.75;font-family:'HYYanKaiJ';"></div>
+                     <input class="say" value='45'>
+			<div class="by" style="top:33rem;right:6rem;color: #fcf3d9;font-family:'HYYanKaiJ';"></div>
+        </div>
+        <div class="tip">长按图片即可发送给朋友</div>
+    </div>
+
+    <div class="poster">
+        <div id='imgBox' class="section"></div>
+        <div class="tip">
+    		<img id="mytip" src="img/_0001_长按图片即可发送给朋友.png">
+    	</div>
+    	<div class="posterbtn">
+    	    <a href="index.html" class="posterbtnClose">
+    			<img id="myposterbtn" src="img/_0000_再做一张.png">
+    			</a>
+    	</div>
+    </div>
+<script>
+	(function() {
+	    if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+	        handleFontSize();
+	    } else {
+	        document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+	    }
+	    function handleFontSize() {
+	        // 设置网页字体为默认大小
+	        WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+	        // 重写设置网页字体大小的事件
+	        WeixinJSBridge.on('menu:setfont', function() {
+	            WeixinJSBridge.invoke('setFontSizeCallback', { 'fontSize' : 0 });
+	        });
+	    }
+	})();
+$(function(){
+    $('#coloring').change(function(){
+        color = $(this).val();
+		
+		$('#poster>div').css({'color':color});
+        
+    })
+	$('#fonting').change(function(){
+	    font = $(this).val();
+		$('#poster>div').css({'font-family':font});
+	    
+	})
+	
+})
+</script>
+</body>
+</html>

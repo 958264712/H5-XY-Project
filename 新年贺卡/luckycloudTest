@@ -1,0 +1,51 @@
+<style>
+    .cloud {
+        position: absolute; /* 绝对定位 */
+        display: block;
+        /* 其他样式，例如背景图像等 */
+        transition: opacity 0.5s ease;
+    }
+
+    .cloud1 {
+        top: 5%; /* 假设为 size.width / 20 */
+        width: 85%; /* 假设为 size.width * (6.8 / 8) */
+        left: 6.25%; /* 假设为 size.width / 16 */
+    }
+
+    .cloud2 {
+        /* 可以根据需要设置不同的位置和大小 */
+        top: 10%;
+        width: 85%;
+        left: 6.25%;
+    }
+
+    /* 每个“祥云”元素都有一个唯一的id（例如cloud1和cloud2），这些id与链接的href属性相对应（如href="#cloud1"）。
+当用户点击链接时，URL的hash部分会变为对应的id（如#cloud1），而:target伪类会应用于该ID的元素。
+.cloud:target的样式设置为display: none;，意味着当元素成为target（即用户点击了对应链接）时，它会被隐藏。 */
+
+    /* 淡出动画和 :target 样式与之前相同 */
+
+    @keyframes fadeOut {
+        to {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    .cloud:target {
+        animation: fadeOut 0.5s forwards;
+    }
+
+    /* 这里的关键点在于：
+在.cloud样式中添加了transition: opacity 0.5s ease;，这会在透明度发生变化时提供一个平滑的过渡效果。
+定义了一个名为fadeOut的@keyframes动画，当动画结束时，元素的透明度变为0，即完全透明。
+在.cloud:target中，应用了fadeOut动画，设置动画持续时间为0.5秒，并且forwards关键字使元素在动画结束后保持结束状态的样式。 */
+
+
+</style>
+
+<a href="#cloud1">隐藏祥云1</a>
+<a href="#cloud2">隐藏祥云2</a>
+
+<div id="cloud1" class="cloud cloud1">祥云1</div>
+<div id="cloud2" class="cloud cloud2">祥云2</div>

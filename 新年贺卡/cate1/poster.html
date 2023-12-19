@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta name="viewport" content="width=750,user-scalable=no,target-densityDpi=device-dpi">
+    <title>为北京冬奥打call</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/jquery.2.2.4.js"></script>
+    <script src="../js/html2canvas.js"></script>
+    <script src="../js/my.js"></script>
+</head>
+<body>
+    <div class="posterbg" style="background-image:url('img/8.png');">
+          <a href="index.html" class="return" style='position: absolute;left:3%;top:3%;transform: translate(-3%,3%);font-size:36px;color:#000;'>返回重选</a>
+        <!-- <input id="toname" style="position: absolute;left:50%;top:60%;transform: translate(-50%,24%);font-size:24px;"placeholder="发送对象(可不输入,4字以内)" > -->
+		3x+2y+2z=1
+		y=1/16
+		z=1/32
+        <input id="uname" style="position: absolute;left:50%;top:66%;transform: translate(-50%,37%);font-size:24px;color:#000;" placeholder="署名(可不输入,4字以内)" />
+        <!-- <select id="fonting" style="position: absolute;left:50%;top:44%;transform: translate(-50%,44%);font-size:24px;color:#000;">
+        	 <option value="HYYanKaiJ" style="font-family:'HYYanKaiJ'" >字体选择：默认</option>
+        	 <option value="HYYanKaiJ" style="font-family:'HYYanKaiJ'">颜体</option>
+        	   <option value="fangzhengyingbikaishu" style="font-family:'fangzhengyingbikaishu'">楷体</option>
+        	 <option value="STLITI" style="font-family:'STLITI'">隶书</option>
+        	 <option value="STXINGKA" style="font-family:'STXINGKA'">行书</option>   								
+        </select>
+		<select id="coloring" style="position: absolute;left:50%;top:51%;transform: translate(-50%,44%);font-size:24px;color:#000;">
+           <option value="#8a2a00">文字颜色：默认</option>
+           <option value="#fff">白色</option>
+           <option value="#fde5cd">米色</option>
+           <option value="#8a4400">棕色</option>
+           <option value="#8a2a00">褐色</option>
+										
+		</select>
+		 -->
+		
+		<a href="javascript:;" id="btngenerate1" style="position: absolute;left:50%;top:72%;transform: translate(-50%,53%);"></a>
+    </div>
+
+    <div id="view" class="poster">
+        <div id='poster' class="section">
+            <img class="posterimg" src="img/img3.png" alt="">
+			<div class="zhuyuan" style="top: 9rem; left:2rem;writing-mode: lr;line-height:0.75;color: #8a2a00;"></div>
+            <input class="say" value='11'>
+            <div class="by" style="top:34rem;right:60px;color: #8a2a00;"></div>
+        </div>
+        <div class="tip">长按图片即可发送给朋友</div>
+    </div>
+
+    <div class="poster">
+        <div id='imgBox' class="section"></div>
+        <div class="tip">长按图片即可发送给朋友</div>
+		
+		<div class="posterbtn">
+		    <a href="index.html" class="posterbtnClose"> 再做一张 </a>
+		</div>
+    </div>
+<script>
+$(function(){
+    $('#coloring').change(function(){
+        color = $(this).val();
+		
+		$('#poster>div').css({'color':color});
+        
+    })
+	$('#fonting').change(function(){
+	    font = $(this).val();
+		$('#poster>div').css({'font-family':font});
+	    
+	})
+})
+</script>
+</body>
+</html>

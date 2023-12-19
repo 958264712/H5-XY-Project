@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>2023新春贺贴</title>
+
+    <script src="js/jquery.2.2.4.js"></script>
+    <script src="js/jquery.touchSwipe.min.js"></script>
+    <script src="js/resLoader.js"></script>
+
+  </head>
+  <body>
+    <div id="loading">
+      <!-- <img id="temp" src="img/2.jpg"/> -->
+      <div class="progress" hidden="hidden">
+        <div class="progresstext">
+          <span class="total" id="totalword"></span>
+        </div>
+      </div>
+      <img id="loadingword1" src="img/_0003_诗.png" />
+
+      <img id="bianpao1" src="img/鞭炮/右上星.png" />
+      <img id="bianpao2" src="img/鞭炮/左上星.png" />
+      <img id="bianpao3" src="img/鞭炮/左下角星1.png" />
+      <img id="bianpao4" src="img/鞭炮/左下角星2.png" />
+      <img id="bianpao5" src="img/鞭炮/右上鞭炮.png" />
+      <img id="bianpao6" src="img/鞭炮/左上角鞭炮.png" />
+      <img id="bianpao7" src="img/鞭炮/左下角的鞭炮.png" />
+
+      <img id="denglongshang" src="img/灯笼上.png" />
+      <img id="denglongxia" src="img/灯笼下.png" />
+      <img id="denglongzhuti1" src="img/灯笼主体/_0004s_0000_内.png" />
+      <img id="denglongzhuti2" src="img/灯笼主体/_0004s_0003_中.png" />
+      <img id="denglongzhuti3" src="img/灯笼主体/_0004s_0002_外.png" />
+
+      <img id="wordxin" src="img/新春快乐/_0001s_0003_新.png" hidden="hidden" />
+      <img
+        id="wordchun"
+        src="img/新春快乐/_0001s_0002_春.png"
+        hidden="hidden"
+      />
+      <img
+        id="wordkuai"
+        src="img/新春快乐/_0001s_0001_快.png"
+        hidden="hidden"
+      />
+      <img id="wordle" src="img/新春快乐/_0001s_0000_乐.png" hidden="hidden" />
+
+      <img id="yunshang" src="img/云/云（上）.png" />
+      <img id="yunxia" src="img/云/云（下）.png" />
+
+      <img id="anniu" src="img/点击制作.png" hidden="hidden" />
+      <img id="logo1" src="img/出品4.png" />
+      <!-- <div id="biaoshilogo">
+
+				
+				<br /> -->
+
+      <!-- <img id="logo2" src="img/中传logo.png" /> -->
+
+      <!-- </div> -->
+      <footer>
+        <p id="beian" style="color: #ffffff">京ICP备20028864号</p>
+        <style>
+          #beian {
+            position: absolute;
+            font-size: 30px;
+            right: 0%;
+            bottom: 0%;
+            z-index: 999;
+          }
+        </style>
+      </footer>
+    </div>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+      }
+
+      body {
+        background: url(img/_0004_背景.png) 0 0 no-repeat;
+        background-size: 100% 100%;
+        overflow: hidden;
+      }
+
+      #loading {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+
+        overflow: hidden;
+      }
+
+      img {
+        position: absolute;
+        top: 0rem;
+        /* left: 0rem; */
+        z-index: 2;
+      }
+
+      #logo1 {
+        position: absolute;
+        left: 0rem;
+        z-index: 100;
+        /* bottom: 0rem; */
+      }
+
+      #bianpao1 {
+        position: absolute;
+        z-index: 6;
+        transform: scale(0);
+        animation: yanhua 2s infinite;
+      }
+
+      #bianpao2 {
+        position: absolute;
+        z-index: 6;
+        transform: scale(0);
+        animation: yanhua 2s 0.5s infinite;
+      }
+
+      #bianpao3 {
+        position: absolute;
+        z-index: 6;
+        transform: scale(0);
+        animation: yanhua 2s 1s infinite;
+      }
+
+      #bianpao4 {
+        position: absolute;
+        z-index: 6;
+        transform: scale(0);
+        animation: yanhua 2s 1.5s infinite;
+      }
+
+      #bianpao5 {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #bianpao6 {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #bianpao7 {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #denglongshang {
+        position: absolute;
+        z-index: 7;
+      }
+
+      #denglongxia {
+        position: absolute;
+        z-index: 7;
+      }
+
+      #denglongzhuti1 {
+        position: absolute;
+        z-index: 5;
+        animation: zhuan 30s linear infinite;
+      }
+
+      #denglongzhuti2 {
+        position: absolute;
+        z-index: 4;
+      }
+
+      #denglongzhuti3 {
+        position: absolute;
+        z-index: 3;
+      }
+
+      #wordxin {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #wordchun {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #wordkuai {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #wordle {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #yunshang {
+        position: absolute;
+        right: 0rem;
+        z-index: 6;
+      }
+
+      #yunxia {
+        position: absolute;
+        z-index: 6;
+      }
+
+      #anniu {
+        position: absolute;
+        z-index: 9;
+        animation: huxi 3s 5;
+      }
+
+      @keyframes yanhua {
+        0% {
+          transform: scale(0);
+          opacity: 1;
+        }
+
+        60% {
+          transform: scale(1);
+          opacity: 1;
+        }
+
+        100% {
+          transform: scale(1);
+          opacity: 0;
+        }
+      }
+
+      @keyframes zhuan {
+        from {
+          transform: rotate(0turn);
+        }
+
+        to {
+          transform: rotate(1turn);
+        }
+      }
+
+      @keyframes huxi {
+        0% {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+        }
+
+        50% {
+          transform: scale(1.2);
+          -webkit-transform: scale(1.2);
+        }
+
+        100% {
+          transform: scale(1);
+          -webkit-transform: scale(1);
+        }
+      }
+
+      .progress {
+        width: 800px;
+        height: 1000px;
+        /* border: 3px solid #f8c073; */
+        position: absolute;
+        left: 100px;
+        top: 0px;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        z-index: 100;
+      }
+
+      .progresstext {
+        position: absolute;
+        color: #f0f8ff;
+        top: 30px;
+        left: 0px;
+      }
+
+      .total {
+        /* position: relative; */
+        color: #f1d6a0;
+        top: 1rem;
+        left: 1rem;
+        font-size: 70px;
+        font-weight: 400;
+        z-index: 100;
+      }
+
+      #biaoshilogo {
+        position: absolute;
+        font-family: "黑体";
+        color: #5a2911;
+        right: 1rem;
+        bottom: 1rem;
+        text-align: right;
+        font-size: 17px;
+      }
+    </style>
+    <script>
+      var isloaded = false;
+      var loader = new resLoader({
+        resources: [
+          "cate1/img/1.png",
+          "cate1/img/2.png",
+          "cate1/img/3.png",
+          "cate1/img/4.png",
+          "cate1/img/5.png",
+          "cate1/img/6.png",
+          "cate1/img/7.png",
+          "cate1/img/8.png",
+          "cate1/img/9.png",
+          "cate1/img/tapbg.png",
+          "cate1/img/纯色背景.png",
+          "cate1/img/上方文字.png",
+          "cate1/img/下方说明.png",
+
+          "cate1/img/ex/1.png",
+          "cate1/img/ex/2.png",
+          "cate1/img/ex/3.png",
+          "cate1/img/ex/4.png",
+          "cate1/img/ex/5.png",
+          "cate1/img/ex/6.png",
+          "cate1/img/ex/7.png",
+          "cate1/img/ex/8.png",
+          "cate1/img/ex/9.png",
+
+          "cate1/img/ex/1s.png",
+          "cate1/img/ex/2s.png",
+          "cate1/img/ex/3s.png",
+          "cate1/img/ex/4s.png",
+          "cate1/img/ex/5s.png",
+          "cate1/img/ex/6s.png",
+          "cate1/img/ex/7s.png",
+          "cate1/img/ex/8s.png",
+          "cate1/img/ex/9s.png",
+          "img/btnbg.png",
+          "img/catebg.jpg",
+        ],
+        onStart: function (total) {
+          setTimeout(function () {
+            if (isloaded == false) {
+              $(".progress").show();
+            }
+          }, 1000);
+        },
+        onProgress: function (current, total) {
+          var numtemp = Math.trunc((current * 100) / total);
+          if (numtemp < 10) {
+            numtemp = 10;
+          } else if (numtemp < 20) {
+            numtemp = 20;
+          } else if (numtemp < 30) {
+            numtemp = 30;
+          } else if (numtemp < 40) {
+            numtemp = 40;
+          } else if (numtemp < 50) {
+            numtemp = 50;
+          }
+          $(".progresstext .total").text(numtemp + "%");
+        },
+        onComplete: function (total) {
+          isloaded = true;
+          $(".progress").hide();
+
+          $("#anniu").show();
+
+          $("#loadingbtn").addClass("loadingbtnshow");
+
+          setTimeout(function () {
+            $("#biaoshilogo").fadeOut(500);
+          }, 1000);
+        },
+      });
+
+      loader.start();
+
+      var size = {
+        width: window.innerWidth || document.body.clientWidth,
+        height: window.innerHeight || document.body.clientHeight,
+      };
+
+      $("body").css({
+        // 'top': -size.height * 5/6 + 'px',
+        width: size.width + "px",
+        height: size.height + "px",
+        "min-height": size.height + "px",
+        "min-width": size.width + "px",
+        "max-height": size.height + "px",
+        "max-width": size.width + "px",
+        // 'left':size.width*1/4 + 'px',
+      });
+      $("#loading").css({
+        // 'top': -size.height * 5/6 + 'px',
+        width: size.width + "px",
+        height: size.height + "px",
+        "min-height": size.height + "px",
+        "min-width": size.width + "px",
+        "max-height": size.height + "px",
+        "max-width": size.width + "px",
+        // 'left':size.width*1/4 + 'px',
+      });
+      $("#loadingword1").css({
+        // 'top': -size.height * 5/6 + 'px',
+        width: (size.width * 1) / 7 + "px",
+        top: (size.width * 1) / 17 + "px",
+        left: (size.width * 1) / 17 + "px",
+        // 'left':size.width*1/4 + 'px',
+      });
+
+      $("#bianpao1").css({
+        width: size.width * +"px",
+        top: (size.width * 0.9) / 2 + "px",
+        left: (size.width * 1.2) / 2 + "px",
+      });
+
+      $("#bianpao2").css({
+        width: size.width * +"px",
+        top: (size.width * 0.8) / 2 + "px",
+        left: (size.width * 0.45) / 2 + "px",
+      });
+
+      $("#bianpao3").css({
+        width: size.width * +"px",
+        top: (size.width * 1.6) / 2 + "px",
+        left: (size.width * 0.5) / 2 + "px",
+      });
+
+      $("#bianpao4").css({
+        width: size.width * +"px",
+        top: (size.width * 1.68) / 2 + "px",
+        left: (size.width * 0.65) / 2 + "px",
+      });
+
+      $("#bianpao5").css({
+        width: (size.width * 1) / 7.5 + "px",
+        top: (size.width * 0.96) / 2 + "px",
+        left: (size.width * 1.345) / 2 + "px",
+      });
+
+      $("#bianpao6").css({
+        width: (size.width * 1) / 6.5 + "px",
+        top: (size.width * 0.86) / 2 + "px",
+        left: (size.width * 0.2) / 2 + "px",
+      });
+
+      $("#bianpao7").css({
+        width: (size.width * 1) / 4.7 + "px",
+        top: (size.width * 1.655) / 2 + "px",
+        left: (size.width * 0.45) / 2 + "px",
+      });
+
+      $("#denglongshang").css({
+        width: (size.width * 1) / 6 + "px",
+        top: (size.width * -0.08) / 2 + "px",
+        left: (size.width * 2.5) / 6 + "px",
+      });
+
+      $("#denglongxia").css({
+        width: (size.width * 1) / 6 + "px",
+        top: (size.width * 2.222) / 2 + "px",
+        left: (size.width * 2.5) / 6 + "px",
+      });
+
+      $("#denglongzhuti1").css({
+        width: (size.width * 6.25) / 10 + "px",
+        top: (size.width * 1.2) / 3 + "px",
+        left: (size.width * 1.875) / 10 + "px",
+      });
+
+      $("#denglongzhuti2").css({
+        width: (size.width * 7.25) / 10 + "px",
+        top: (size.width * 1.045) / 3 + "px",
+        left: (size.width * 1.375) / 10 + "px",
+      });
+
+      $("#denglongzhuti3").css({
+        width: (size.width * 8.2) / 10 + "px",
+        top: (size.width * 0.9) / 3 + "px",
+        left: (size.width * 0.9) / 10 + "px",
+      });
+
+      $("#wordxin").css({
+        width: (size.width * 0.9) / 5 + "px",
+        top: (size.width * 1.2) / 3 + "px",
+        left: (size.width * 2.05) / 5 + "px",
+      });
+
+      $("#wordchun").css({
+        width: (size.width * 0.9) / 5 + "px",
+        top: (size.width * 1.62) / 3 + "px",
+        left: (size.width * 2.05) / 5 + "px",
+      });
+
+      $("#wordkuai").css({
+        width: (size.width * 0.9) / 5 + "px",
+        top: (size.width * 2.06) / 3 + "px",
+        left: (size.width * 2.05) / 5 + "px",
+      });
+
+      $("#wordle").css({
+        width: (size.width * 0.9) / 5 + "px",
+        top: (size.width * 2.48) / 3 + "px",
+        left: (size.width * 2.05) / 5 + "px",
+      });
+
+      $("#yunshang").css({
+        width: size.width * +"px",
+        top: (size.width * 1) / 4 + "px",
+        right: (size.width * 0) / 10 + "px",
+      });
+
+      $("#yunxia").css({
+        width: size.width * +"px",
+        top: (size.width * 15) / 10 + "px",
+        left: size.width * +"px",
+      });
+
+      $("#anniu").css({
+        width: (size.width * 1) / 2 + "px",
+        top: (size.height * 2.2) / 3 + "px",
+        left: (size.width * 1) / 4 + "px",
+      });
+
+      $(".progress").css({
+        top: (size.height * 3.0) / 3 + "px",
+        left: (size.width * 1.7) / 4 + "px",
+      });
+      $("#logo1").css({
+        width: (size.width * 8) / 10 + "px",
+        top: (size.height * 18) / 20 + "px",
+        // 'top': size.height * 18.5/ 20 + 'px',
+        left: (size.width * 1) / 10 + "px",
+      });
+      setTimeout(function () {
+        $("#wordxin").slideDown("500");
+      }, 1000);
+      setTimeout(function () {
+        $("#wordchun").slideDown("500");
+      }, 1500);
+      setTimeout(function () {
+        $("#wordkuai").slideDown("500");
+      }, 2000);
+      setTimeout(function () {
+        $("#wordle").slideDown("500");
+      }, 2500);
+
+      $("#anniu").click(function () {
+        window.location.href = "cate1/index.html";
+      });
+    </script>
+  </body>
+</html>

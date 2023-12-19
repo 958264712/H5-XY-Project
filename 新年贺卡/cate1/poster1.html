@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Pragma" contect="no-cache">
+    <meta name="viewport" content="width=750,user-scalable=no,target-densityDpi=device-dpi">
+    <title>前途似锦</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="../js/jquery.2.2.4.js"></script>
+    <script src="../js/html2canvas.js"></script>
+    <script src="../js/my.js"></script>
+</head>
+<body>
+    <div class="posterbg" style="background-image:url('img/ex_副本/1.png');">
+          <a href="index.html" class="return" style='position: absolute;left:3%;top:3%;transform: translate(-3%,3%);font-size:36px;color:#FFF;'>返回重选</a>
+         <input id="toname" style="position: absolute;left:50%;top:53%;transform: translate(-50%,24%);font-size:24px;" placeholder="发送对象(可不输入,4字以内)">
+		
+       <!-- <input id="uname" style="top:21rem;left:12rem;color:#000;font-size:24px" placeholder="请输入您的姓名" /> -->
+	   <input id="uname" style="position: absolute;left:50%;top:59%;transform: translate(-50%,24%);font-size:24px;"placeholder="署名(可不输入,4字以内)" >
+
+        <a href="javascript:;" id="btngenerate" style="position: absolute;left:50%;top:65%;transform: translate(-50%,43%);"></a>
+    </div>
+
+    <div id="view" class="poster">
+        <div id='poster' class="section">
+            <img class="posterimg" src="img/img1.png" alt="">
+			<div class="zhuyuan" style="top: 8rem; left:5rem;color: #fcf3d9;writing-mode: lr;line-height:0.75;font-family:'HYYanKaiJ';"></div>
+                     <input class="say" value='41'>
+			<div class="by" style="top:33rem;right:6rem;color: #fcf3d9;font-family:'HYYanKaiJ';"></div>
+        </div>
+        <!-- <div class="tip">长按图片即可发送给朋友</div> -->
+    </div>
+
+    <div class="poster">
+        <div id='imgBox' class="section"></div>
+        <div class="tip">
+			<img id="mytip" src="img/_0001_长按图片即可发送给朋友.png">
+		</div>
+		<div class="posterbtn">
+		    <a href="index.html" class="posterbtnClose">
+				<img id="myposterbtn" src="img/_0000_再做一张.png">
+				</a>
+		</div>
+    </div>
+<script>
+	
+$(function(){
+    $('#coloring').change(function(){
+        color = $(this).val();
+		
+		$('#poster>div').css({'color':color});
+        
+    })
+	$('#fonting').change(function(){
+	    font = $(this).val();
+		$('#poster>div').css({'font-family':font});
+	    
+	})
+	
+})
+</script>
+</body>
+</html>

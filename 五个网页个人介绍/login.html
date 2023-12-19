@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<style>
+    h3 {
+        margin-top: 300px;
+        text-align: center;
+        font-size: 30px;
+    }
+
+    input {
+        height: 25px;
+        margin-top: 10px;
+        margin-left: 880px;
+    }
+
+    .forgetPass {
+        margin-left: 1020px;
+        color: black;
+    }
+
+    .loginBtn {
+        width: 175px;
+        height: 30px;
+        margin-left: 880px;
+        margin-top: 20px;
+        border: none;
+        background-color: black;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="w">
+        <div class="sw">
+            <a href="login.html">登录</a>
+            <a href="zc.html">注册</a>
+            <a href="login.html" class="logout" onclick="logout()">[退 出]</a>
+        </div>
+        <div class="top">
+            <ul class="nav">
+                <img src="images/logo.png" alt="">
+                <li><a class="dibian" href="index.html">主页</a></li>
+                <li><a href="主人介绍.html">主人介绍</a></li>
+                <li><a href="主人丽影.html">主人丽影</a></li>
+                <li><a href="人生感叹.html">人生感叹</a></li>
+                <li><a href="联系我.html">联系我</a></li>
+            </ul>
+            <h3>个人信息登录</h3>
+            <form>
+                <input type="text" name="userName" class="userName" placeholder="学号"><br />
+                <input type="password" name="password" class="password" placeholder="密码"><br />
+                <a class="forgetPass" href="zc.html">注册</a><br />
+                <button type="button" class="loginBtn" onclick="login()">
+                    登录
+                </button><br />
+            </form>
+        </div>
+</body>
+<script src="js/isLogin.js"></script>
+<script>
+    window.onload = function () {
+        var isLogin = JSON.parse(sessionStorage.getItem("currentUser"))
+        if (isLogin) {
+            alert("您当前已登录")
+            window.location.href = "index.html"
+        }
+    }
+    var userName = null
+    var password = null
+    function login() {
+        userName = document.getElementsByClassName("userName")[0].value
+        password = document.getElementsByClassName("password")[0].value
+        console.log(userName, password);
+        var userInfo = JSON.parse(sessionStorage.getItem("userInfo"))
+        console.log(userInfo);
+        var account = []
+        userInfo.forEach((el) => {
+            if (el.userName == userName) {
+                account.push(el)
+
+            }
+        })
+        console.log(account);
+        if (account.length == 0) {
+            window.alert("用户名不存在")
+            return
+        }
+        if (account[0].password != password) {
+            window.alert("密码错误")
+            return
+        }
+        sessionStorage.setItem("currentUser", JSON.stringify(account[0]))
+        window.location.href = "index.html"
+
+    }
+</script>
+</div>
+</body>
+
+</html>

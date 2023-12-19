@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Pragma" contect="no-cache" />
+    <meta
+      name="viewport"
+      content="width=750,user-scalable=no,target-densityDpi=device-dpi"
+    />
+    <title>选择模板-新春贺帖</title>
+    <!-- 		<link rel="stylesheet" href="../css/swiper.css" />
+		<link rel="stylesheet" href="css/style.css" /> -->
+    <script src="../js/jquery.2.2.4.js"></script>
+    <!-- 		<script src="../js/swiper.min.js"></script>
+		<script src="../js/my.js"></script> -->
+    <style>
+	.long{
+		position: relative;
+		height: 100vh;
+	}
+      .cloud {
+        position: absolute; /* 绝对定位 */
+		visibility: visible;
+        /* 其他样式，例如背景图像等 */
+        transition: opacity 0.5s ease;
+      }
+
+      .cloud1 {
+        top: 9%; /* 假设为 size.width / 20 */
+        width: 100%; /* 假设为 size.width * (6.8 / 8) */
+        left: 6.25%; /* 假设为 size.width / 16 */
+        background-image: url("./img/云彩.png");
+        height: 50%;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          visibility: visible;
+        }
+		100%{
+			opacity: 0;
+          	visibility: hidden;
+			z-index: 0;
+			height: 0;
+			width: 0;
+			display: none;
+		}
+      }
+
+    </style>
+  </head>
+  <body>
+    <style>
+      .card {
+        perspective: 1000px;
+        /* background-size: 100% 100%; */
+      }
+
+      .front,
+      .back {
+        display: flex;
+
+        background-position: center;
+        background-size: cover;
+
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: ease-in-out 600ms;
+      }
+
+      /* //字体 */
+      .front {
+        background-size: cover;
+
+        font-size: 1.618rem;
+        font-weight: 600;
+        color: #ffffff;
+        overflow: hidden;
+        font-family: Poppins, sans-serif;
+      }
+
+      .front:before {
+        position: absolute;
+        display: block;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -1;
+      }
+
+      .back {
+        transform: rotateY(-180deg);
+      }
+    </style>
+    <img id="shangfangwenzi" src="img/2024新年快乐.png" />
+    <!-- <img id="shangfangwenzi1" src="img/新年快乐.png" /> -->
+
+    <img id="yanhua1" src="img/烟花/烟花1.png" />
+    <img id="yanhua2" src="img/烟花/烟花2.png" />
+    <img id="yanhua3" src="img/烟花/烟花4.png" />
+
+    <div class="long">
+      <a class="card" href="#!" id="jiu1">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/1.gif)"
+        ></div>
+        <div
+          id="back_1"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+
+      <a class="card" href="#!" id="jiu2">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/2.gif)"
+        ></div>
+        <div
+          id="back_2"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu3">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/3.gif)"
+        ></div>
+        <div
+          id="back_3"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu4">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/4.gif)"
+        ></div>
+        <div
+          id="back_4"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu5">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/5.gif)"
+        ></div>
+        <div
+          id="back_5"
+          class="back"
+          style="background-image: url(img/ex_副本/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu6">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/6.gif)"
+        ></div>
+        <div
+          id="back_6"
+          class="back"
+          style="background-image: url(img/ex_副本/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu7">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/7.gif)"
+        ></div>
+        <div
+          id="back_7"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu8">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/8.gif)"
+        ></div>
+        <div
+          id="back_8"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="card" href="#!" id="jiu9">
+        <div
+          class="front"
+          style="background-image: url(img/images_副本/9.gif)"
+        ></div>
+        <div
+          id="back_9"
+          class="back"
+          style="background-image: url(img/10.png)"
+        ></div>
+      </a>
+      <a class="cloud cloud1" id="cloud"></a>
+    </div>
+
+    <img id="btn" src="img/下方说明.png" />
+
+    <style>
+      body {
+        background: url(img/纯色背景.png) 0 0 no-repeat;
+        background-size: 100% 100%;
+        z-index: 1;
+        overflow: hidden;
+      }
+
+      #yanhua1,
+      #yanhua2,
+      #yanhua3 {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+        z-index: 50;
+      }
+
+      #shangfangwenzi {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+      }
+
+      /* #shangfangwenzi1 {
+				position: absolute;
+				top: 0rem;
+				right: 0rem;
+			} */
+
+      #jiu1,
+      #jiu2,
+      #jiu3,
+      #jiu4,
+      #jiu5,
+      #jiu6,
+      #jiu7,
+      #jiu8,
+      #jiu9 {
+        position: absolute;
+        top: 0rem;
+        left: 0rem;
+      }
+
+      #btn {
+        position: absolute;
+        bottom: 0rem;
+        left: 0rem;
+      }
+    </style>
+    <script>
+      var size = {
+        width: window.innerWidth || document.body.clientWidth,
+        height: window.innerHeight || document.body.clientHeight,
+      };
+      var myaudio = new Audio("img/bgm1.mp3");
+      myaudio.loop = true;
+      myaudio.play();
+      $("body").css({
+        height: size.height + "px",
+        width: size.width + "px",
+      });
+
+      $("#shangfangwenzi").css({
+        top: size.width / 70 + "px",
+        width: size.width * (6.8 / 8) + "px",
+        height: (size.width * x * 600) / 250 + "px",
+        left: (size.width * 1) / 16 + "px",
+      });
+      // $('#shangfangwenzi1').css({
+      // 	'top': size.width * 0.8 / 20 + 'px',
+      // 	'width': size.width * (4 / 8) + 'px',
+      // 	'right': size.width * 1 / 16 + 'px',
+
+      // });
+      var y = 1 / 9;
+      var z = 1 / 196;
+      var x = (1 - 2 * y - 2 * z) / 3;
+      $(".card").css({
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+      });
+      $(".back").css({
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+      });
+      $("#jiu1").css({
+        top: (size.width * 2.1) / 6 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * y + "px",
+      });
+      $("#jiu2").css({
+        top: (size.width * 2.1) / 6 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (x + y + z) + "px",
+      });
+      $("#jiu3").css({
+        top: (size.width * 2.1) / 6 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (1 - y - x) + "px",
+      });
+
+      $("#jiu4").css({
+        top: (size.width * 6.7) / 8.3 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * y + "px",
+      });
+      $("#jiu5").css({
+        top: (size.width * 6.7) / 8.3 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (x + y + z) + "px",
+      });
+      $("#jiu6").css({
+        top: (size.width * 6.7) / 8.3 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (1 - y - x) + "px",
+      });
+
+      $("#jiu7").css({
+        top: (size.width * 11.3) / 8.9 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * y + "px",
+      });
+      $("#jiu8").css({
+        top: (size.width * 11.3) / 8.9 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (x + y + z) + "px",
+      });
+      $("#jiu9").css({
+        top: (size.width * 11.3) / 8.9 + "px",
+        width: size.width * x + "px",
+        height: (size.width * x * 445) / 250 + "px",
+        left: size.width * (1 - y - x) + "px",
+      });
+      $("#btn").css({
+        bottom: (size.width * 1) / 20 + "px",
+        width: (size.width * 1) / 2 + "px",
+
+        left: (size.width * 1) / 4 + "px",
+      });
+
+      $("#yanhua1").css({
+        top: (size.width * 1) / 10 + "px",
+        width: (size.width * 1) / 5 + "px",
+
+        left: size.width * 0 + "px",
+      });
+
+      $("#yanhua2").css({
+        top: (size.width * 1) / 10 + "px",
+        width: (size.width * 1) / 5 + "px",
+
+        left: (size.width * 1) / 2 + "px",
+      });
+      $("#yanhua3").css({
+        top: (size.width * 13) / 10 + "px",
+        width: (size.width * 1) / 5 + "px",
+
+        left: size.width * 0 + "px",
+      });
+      // $('#back_1').css("background-image", "url(" + imglist[random_index] + ")");
+
+      var isrotatelist = [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+      ];
+      var imglist = [
+        "img/ex_副本/1s.png",
+        "img/ex_副本/2s.png",
+        "img/ex_副本/3s.png",
+        "img/ex_副本/4s.png",
+        "img/ex_副本/5s.png",
+        "img/ex_副本/6s.png",
+        "img/ex_副本/7s.png",
+        "img/ex_副本/8s.png",
+        "img/ex_副本/9s.png",
+      ];
+
+      var random_index1 = Math.floor(Math.random() * 9);
+      random_index1 = 0;
+      $("#back_1").css(
+        "background-image",
+        "url(" + imglist[random_index1] + ")"
+      );
+
+      $("#jiu1").click(function () {
+        if (isrotatelist[0] == false) {
+          $("#jiu1 .front").css("transform", "rotateY(180deg)");
+          $("#jiu1 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[0] = true;
+        } else {
+          // $('#jiu1 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu1 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster1.html";
+          isrotatelist[0] = false;
+        }
+      });
+
+      var random_index2 = Math.floor(Math.random() * 9);
+      random_index2 = 1;
+
+      $("#back_2").css(
+        "background-image",
+        "url(" + imglist[random_index2] + ")"
+      );
+      $("#jiu2").click(function () {
+        if (isrotatelist[1] == false) {
+          $("#jiu2 .front").css("transform", "rotateY(180deg)");
+          $("#jiu2 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[1] = true;
+        } else {
+          // $('#jiu2 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu2 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster2.html";
+          isrotatelist[1] = false;
+        }
+      });
+
+      var random_index3 = Math.floor(Math.random() * 9);
+      random_index3 = 2;
+      $("#back_3").css(
+        "background-image",
+        "url(" + imglist[random_index3] + ")"
+      );
+      $("#jiu3").click(function () {
+        if (isrotatelist[2] == false) {
+          $("#jiu3 .front").css("transform", "rotateY(180deg)");
+          $("#jiu3 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[2] = true;
+        } else {
+          // $('#jiu3 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu3 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster3.html";
+          isrotatelist[2] = false;
+        }
+      });
+
+      var random_index4 = Math.floor(Math.random() * 9);
+      random_index4 = 3;
+      $("#back_4").css(
+        "background-image",
+        "url(" + imglist[random_index4] + ")"
+      );
+      $("#jiu4").click(function () {
+        if (isrotatelist[3] == false) {
+          $("#jiu4 .front").css("transform", "rotateY(180deg)");
+          $("#jiu4 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[3] = true;
+        } else {
+          // $('#jiu4 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu4 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster4.html";
+          isrotatelist[3] = false;
+        }
+      });
+
+      var random_index5 = Math.floor(Math.random() * 9);
+      random_index5 = 4;
+      $("#back_5").css(
+        "background-image",
+        "url(" + imglist[random_index5] + ")"
+      );
+      $("#jiu5").click(function () {
+        if (isrotatelist[4] == false) {
+          $("#jiu5 .front").css("transform", "rotateY(180deg)");
+          $("#jiu5 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[4] = true;
+        } else {
+          // $('#jiu5 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu5 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster5.html";
+          isrotatelist[4] = false;
+        }
+      });
+
+      var random_index6 = Math.floor(Math.random() * 9);
+      random_index6 = 5;
+      $("#back_6").css(
+        "background-image",
+        "url(" + imglist[random_index6] + ")"
+      );
+      $("#jiu6").click(function () {
+        if (isrotatelist[5] == false) {
+          $("#jiu6 .front").css("transform", "rotateY(180deg)");
+          $("#jiu6 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[5] = true;
+        } else {
+          // $('#jiu6 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu6 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster6.html";
+          isrotatelist[5] = false;
+        }
+      });
+
+      var random_index7 = Math.floor(Math.random() * 9);
+      random_index7 = 6;
+      $("#back_7").css(
+        "background-image",
+        "url(" + imglist[random_index7] + ")"
+      );
+      $("#jiu7").click(function () {
+        if (isrotatelist[6] == false) {
+          $("#jiu7 .front").css("transform", "rotateY(180deg)");
+          $("#jiu7 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[6] = true;
+        } else {
+          // $('#jiu7 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu7 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster7.html";
+          isrotatelist[6] = false;
+        }
+      });
+
+      var random_index8 = Math.floor(Math.random() * 9);
+      random_index8 = 7;
+      $("#back_8").css(
+        "background-image",
+        "url(" + imglist[random_index8] + ")"
+      );
+      $("#jiu8").click(function () {
+        if (isrotatelist[7] == false) {
+          $("#jiu8 .front").css("transform", "rotateY(180deg)");
+          $("#jiu8 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[7] = true;
+        } else {
+          // $('#jiu8 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu8 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster8.html";
+          isrotatelist[7] = false;
+        }
+      });
+
+      var random_index9 = Math.floor(Math.random() * 9);
+      random_index9 = 8;
+      $("#back_9").css(
+        "background-image",
+        "url(" + imglist[random_index9] + ")"
+      );
+      $("#jiu9").click(function () {
+        if (isrotatelist[8] == false) {
+          $("#jiu9 .front").css("transform", "rotateY(180deg)");
+          $("#jiu9 .back").css("transform", "rotateY(0deg)");
+          isrotatelist[8] = true;
+        } else {
+          // $('#jiu9 .front').css("transform", "rotateY(0deg)");
+          // $('#jiu9 .back').css("transform", "rotateY(-180deg)");
+          window.location.href = "poster9.html";
+          isrotatelist[8] = false;
+        }
+      });
+	  $("#cloud").click(function(){
+		$("#cloud").css("animation"," fadeOut 1.5s linear")
+		$("#cloud").css("visibility"," hidden")
+	  })
+    </script>
+  </body>
+</html>
