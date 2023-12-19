@@ -2,36 +2,48 @@ body{
 	background-image: url('../images/bg2.jpg');
 	background-size: cover;
 }
-.nav-link {
-	color: #fff;
-}
+
 header {
 	margin-bottom: 0;
 }
-.part1{
+.main{
 	margin: 0 auto;
 }
-.part1 .item{
- font-size: 16px;
- color: #fff;
+.main h1{
+	margin: 50px 0;
+	color: #c9ad8d;
+	font-size: 3.5rem;
 }
-.part1 .item h3{
-	height: 60px;
+.main p{
+	color: #c9ad8d;
+	font-size: 1.5rem;
+	text-indent: 4rem;
 }
-.part1 .item p{
-	text-indent: 2rem;
+.imgs img{
+	height: 100%;
 }
-.part1 .item .coinType {
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.imglist{
 	justify-content: space-between;
 }
-.part1 .item .coinType .specailImg,.part1 .item .coinType .specailImg1 {
-	margin-bottom: 30px;
+.imglist>div img{
+	display: block;
 }
-.part1 .item .coinType .specailImg img{
-	height: 110px;
+.imglist>div{
+	text-align: center;
 }
-.part1 .item .coinType .specailImg1 img{
-	height: 190px;
+.imglist>div p{
+	text-indent: 0;
+
+}
+.show>div p{
+	text-indent: 0px;
+	text-align: center;
 }
 .row .ite{
 	text-align: center;
@@ -44,7 +56,7 @@ header {
 .openmodel{
 	display: flex;
 	align-items: center;
-	background-image: url('../images/bg2.jpg');
+	background-image: url('../images/bg4.jpg');
 }
 .openmodel .left{
     width: 700px;
@@ -70,6 +82,9 @@ header {
 	font-size: 24px;
 	font-weight: bold;
 }
+.nav-link {
+	color: #fff;
+}
 .openmodel .right p{
 	font-size: 20px;
 }
@@ -93,6 +108,10 @@ header {
 }
 .layui-layer-setwin .layui-icon-close:before {
     content: "X";
+}
+.col-12 img{
+	max-width: 100%;
+	max-height: 100%;
 }
 .moeny ul{
 	position: absolute;

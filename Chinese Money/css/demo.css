@@ -1,0 +1,100 @@
+.background{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+    transform: translateY(0px) rotate(0deg) scale(1);
+	cursor: pointer;
+    transform-origin: 50% 100%;
+	transition: all 0.4s ease 0s;
+}
+.background img{
+	max-width: 100%;
+	max-height: 100%;
+	transform: scale(1);
+	display: block;
+	transition: all 0.4s ease 0s;
+}
+.stack {
+	position: relative;
+	width: 100%;
+	/*height: 200px;*/
+	transform-style: preserve-3d;
+}
+
+.stack__deco {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: currentColor;
+	transform-origin: 50% 100%;
+}
+
+
+.stack__figure {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	transform-origin: 50% 50%;
+}
+
+.stack__img {
+	position: relative;
+	display: block;
+	flex: none;
+}
+.stack {
+    position: relative;
+    width: 100%;
+    transform-style: preserve-3d;
+}
+.stack:hover .background{
+    transform: translateY(-20px) rotate(0deg) scale(1);
+	transition-duration:0.5s;
+	transform-origin: 50% 50%;
+}
+.stack:hover img{
+	transform: scale(.7);
+	transition-duration:0.5s;
+	transition: all 0.4s ease 0s;
+}
+.stack:hover .stack__deco:first-child {
+	opacity: .2;
+    transform: translateY(0px) rotate(5deg) scale(1.05);
+	transition-duration:0.5s;
+
+}
+.stack:hover .stack__deco:nth-child(2){
+	opacity: .4;
+    transform: translateY(-5px) rotate(-4deg) scale(1.05);
+	transition-duration:0.5s;
+}
+.stack:hover .stack__deco:nth-child(3){
+	opacity: .6;
+    transform: translateY(-10px) rotate(3deg) scale(1.05);
+	transition-duration:0.5s;
+}
+.stack:hover .stack__deco:nth-child(4){
+	opacity: .8;
+    transform: translateY(-15px) rotate(-2deg) scale(1.05);
+	transition-duration:0.5s;
+}
+
+.stack__deco {
+    position: absolute;
+	opacity:0;
+	transition: all 0.4s ease 0s;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: 50% 100%;
+	background-color: rgb(108, 66, 110);
+}

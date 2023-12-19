@@ -19,19 +19,35 @@
 </head>
 
 <body>
-	<header class="d-flex flex-wrap justify-content-center py-3 border-bottom">
-		<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-			<svg class="bi me-2" width="40" height="32">
-				<use xlink:href="#bootstrap"></use>
-			</svg>
-		</a>
-		<ul class="nav nav-pills">
-			<li class="nav-item"><a href="#" class="nav-link active" aria-current="page">首页</a></li>
-			<li class="nav-item"><a href="./page/page1.html" class="nav-link">Features</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
-			<li class="nav-item"><a href="#" class="nav-link">About</a></li>
-		</ul>
+	<audio preload autoplay loop id="music" >
+		<source src="./常思思 - 岁岁年年 (伴奏).mp3" type="audio/mpeg" />
+	</audio>
+
+	<header class=" border-bottom">
+		<div class="d-flex flex-wrap justify-content-center py-3 container">
+			<a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+				<svg class="bi me-2" width="40" height="32">
+					<use xlink:href="#bootstrap"></use>
+				</svg>
+			</a>
+			<ul class="nav nav-pills">
+				<li class="nav-item"><a href="./index.html" class="nav-link active" aria-current="page">首页</a></li>
+				<li class="nav-item moeny">
+					<div class="nav-link" aria-current="page">货币发展</div>
+					<ul>
+						<li class="nav-item"><a href="./page/page1.html" class="nav-link">夏、商、周的货币</a></li>
+						<li class="nav-item"><a href="./page/page2.html" class="nav-link">圜宇方圆，周圆函方（秦、汉）</a></li>
+						<li class="nav-item"><a href="./page/page3.html" class="nav-link">宝通千年（唐）</a></li>
+						<li class="nav-item"><a href="./page/page4.html" class="nav-link">多政权并立下的经济（宋辽金夏）</a></li>
+						<li class="nav-item"><a href="./page/page5.html" class="nav-link">纸钞统一（元）</a></li>
+						<li class="nav-item"><a href="./page/page6.html" class="nav-link">“钱”世“金”生（明清）</a></li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="./page/tgbk.html" class="nav-link" aria-current="page">天宫宝库</a></li>
+				<li class="nav-item"><a href="./page/aboutme.html" class="nav-link" aria-current="page">关于我们</a></li>
+				<li class="nav-item"><a href="./page/more.html" class="nav-link " aria-current="page">更多</a></li>
+			</ul>
+		</div>
 	</header>
 	<div class="headerimg"></div>
 	<div class="ychs_wai ychs_wai04 shojiwa01 brief">
@@ -68,27 +84,27 @@
 	</div>
 	<div class="itemList row" id="itemList">
 		<a href="./page/page1.html" class="item col-2">
-			<h2>夏、商、周的货币</h2>
+			<h4>夏、商、周的货币</h4>
 			<img src="./images/p2.png" />
 		</a>
 		<a href="./page/page2.html" class="item col-2">
-			<h2>圜宇方圆，周圆函方（秦、汉）</h2>
+			<h4>圜宇方圆，周圆函方（秦、汉）</h4>
 			<img src="./images/p3.png" />
 		</a>
 		<a href="./page/page3.html" class="item col-2">
-			<h2>宝通千年（唐）</h2>
+			<h4>宝通千年（唐）</h4>
 			<img src="./images/p4.png" />
 		</a>
 		<a href="./page/page4.html" class="item col-2">
-			<h2>多政权并立下的经济（宋辽金夏）</h2>
+			<h4>多政权并立下的经济（宋辽金夏）</h4>
 			<img src="./images/p5.png" />
 		</a>
 		<a href="./page/page5.html" class="item col-2">
-			<h2>纸钞统一（元）</h2>
+			<h4>纸钞统一（元）</h4>
 			<img src="./images/p6.png" />
 		</a>
 		<a href="./page/page6.html" class="item col-2">
-			<h2>“钱”世“金”生（明清）</h2>
+			<h4>“钱”世“金”生（明清）</h4>
 			<img src="./images/p7.png" />
 		</a>
 	</div>
@@ -109,6 +125,13 @@
 	</footer>
 </body>
 <script src="./srcipt.js"></script>
+<script type="text/javascript">
+		var music = document.getElementById("music");//获取ID
+		if (music.paused) { //判读是否播放  
+			music.paused = false;
+			music.play(); //没有就播放 
+		}
+</script>
 <script type="text/html" id="template-lb-tpl">
     <div class="swiper-wrapper" >
     {{each list item i}}

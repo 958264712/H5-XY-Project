@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="./jquery.min.js"></script>
+	<title>注册页面</title>
+	<style>
+		body{
+			width: 100%;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		.rg_center{
+			border: 1px solid #ccc;
+			background-color: #eee;
+			margin: 0 auto;
+			width: 500px;
+			height: 500px;
+		}
+
+		.rg_center h1{
+			text-align: center;
+		}
+		.rg_center form{
+			padding-left: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="rg_center">
+		<h1>个人信息注册页面</h1>
+
+		<!-- 定义表单 form -->
+		<form action="#" method="post">
+			<!-- 定义一个表格 -->
+			<table>
+				<!-- 表格第一行有两个单元格：用户名 + 输入用户名信息区域 -->
+				<tr>
+					<!-- 定义一个标签：用户名 -->
+					<td class="td_left"><label for="username">用户名：</label></td>
+					<!-- 定义输入用户名信息的框框 -->
+					<td class="td_right"><input type="text" name="username" id="username" placeholder="请输入用户名"><span id="username_msg"></span></td>
+				</tr>
+	 
+				<!-- 表格第二行有两个单元格：密码 + 输入密码区域 -->
+				<tr>
+					<!-- 定义一个标签：密码 -->
+					<td class="td_left"><label for="password">密码：</label></td>
+					<!-- 定义输入密码的框框 -->
+					<td class="td_right"><input type="password" name="password" id="password" placeholder="请输入密码"><span id="password_msg"></span</td>
+				</tr>
+				<tr>
+					<!-- 定义一个标签：密码 -->
+					<td class="td_left"><label for="password">确认密码：</label></td>
+					<!-- 定义输入密码的框框 -->
+					<td class="td_right"><input type="password" name="repasswprd" id="repassword" placeholder="请输入密码"><span id="repassword_msg"></span></td>
+				</tr>
+				<tr>
+					<!-- 定义一个标签：性别 -->
+					<td class="td_left"><label>性别</label></td>
+					<!-- 定义两个选择按钮：一个按钮"男"，一个按钮"女" -->
+					<td class="td_right">
+						<input type="radio" name="gender" value="male" checked="checked"> 男
+						<input type="radio" name="gender" value="female"> 女
+					</td>
+				</tr>
+				<tr>
+					<!-- 职业： -->
+					<td class="td_left"><label for="birthday">职业：</label></td>
+					<td class="td_right"><select name="" id="">
+						<option value="student">学生</option>
+						<option value="teacher">老师</option>
+						<option value="baoan">保安</option>
+						<option value="other">其他</option>
+					</select></td>
+				</tr>
+	 
+				<tr>
+					<td class="td_left"><label for="checkcode" >个人爱好：</label></td>
+					<td class="td_right"><input type="checkbox">电脑网络<input type="checkbox">影视娱乐<input type="checkbox">棋牌娱乐<br>
+						<input type="checkbox">读书读报<input type="checkbox">美酒佳肴<input type="checkbox">绘画书法
+					</td>
+				</tr>
+				<tr>
+					<td class="td_left"><label for="checkcode" >个人说明：</label></td>
+					<td class="td_right"><textarea name="" id="" cols="50" rows="10"></textarea>
+					</td>
+				</tr>
+				<!-- 表格第八行有一个单元格：注册按钮 -->
+				<tr>
+					<!-- 定义一个提交按钮 -->
+					<td class="td_left"></td>
+					<td class="td_right"><input type="submit" id="btn_sub" value="提交" style="margin-right: 50px  ;" onclick="return checkForm()"><input type="reset" id="reset" value="重置"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+	<script type="text/javascript">
+        //是否为空
+        function ifnull(txt){
+            if(txt.length==0){
+                return true;
+            }
+            var $reg=/\s+/;
+            return $reg.test(txt);
+        } 
+        //在id为username的元素失去焦点时进行用户名的验证
+        $("#username").blur(function(){
+            if(ifnull($(this).val())){
+                $("#username_msg").html("用户名不能为空");
+            }else{
+                var $reg=/^\w{3,}$/;
+                if(!$reg.test($("#username").val())){
+                    $("#username_msg").html("用户名至少要3位哦");
+                }else{
+                    $("#username_msg").html("√");
+                }
+            }
+        });
+        //在id为password的元素失去焦点时进行密码的验证
+        $("#password").blur(function(){
+            if(ifnull($(this).val())){
+                $("#password_msg").html("用户名不能为空");
+            }else{
+                var $reg=/^\w{6,}$/;
+                if(!$reg.test($("#password").val())){
+                    $("#password_msg").html("密码至少要6位哦");
+                }else{
+                    $("#password_msg").html("√");
+                }
+            }
+        });
+        //在id为repassword的元素失去焦点时进行密码的验证
+        $("#repassword").blur(function(){
+            if(ifnull($(this).val())){
+                $("#repassword_msg").html("请确认密码");
+            }else{
+                if($("#password").val()!=$("#repassword").val()){
+                    $("#repassword_msg").html("两次密码不一致");
+                }else{
+                    $("#repassword_msg").html("√");
+                }
+            }
+        });
+
+        //验证表单
+        function checkForm(){
+            //验证用户名
+            if(ifnull($("#username").val())){
+                $("#username_msg").html("用户名不能为空！");
+                return false;
+            }else{
+                var $reg=/^\w{3,}$/;
+                if(!$reg.test($("#username").val())){
+                    $("#username_msg").html("用户名至少3位");
+                    return false;
+                }
+            }
+            //验证密码
+            if(ifnull($("#password").val())){
+                $("#password_msg").html("密码不能为空");
+                return false;
+            }else{
+                var $reg=/^\w{6,}$/;
+                if(!$reg.test($("#password").val())){
+                    $("#password_msg").html("密码至少6位");
+                    return false;
+                }
+            }
+            //确认密码是否为空
+            if(ifnull($("#repassword").val())){
+                $("#repassword_msg").html("请确认密码");
+                return false;
+            }
+            //验证两次密码是否一致
+            if($("#password").val()!=$("#repassword").val()){
+                $("#repassword_msg").html("两次密码不一致");
+                return false;
+            }
+            return true;
+        }
+    </script>
+
+</body>
+</html>

@@ -1,9 +1,0 @@
-M1：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017BTX6A&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M2：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017B708B&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M3：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017BL0LC&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M4：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017B41TJ&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M5：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017BVZGB&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M6：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017BF74T&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M7：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017B53D0&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M8：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017BJSSA&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>
-M9：<iframe width=640 height=480 src="https://www.51jianmo.com/newModel/?code=P000000000002017B1MLU&desc=0&icon=1&type=1&quick=0&opacity=0&full=0&isxcx=0" allowfullscreen></iframe>

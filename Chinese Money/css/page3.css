@@ -2,36 +2,43 @@ body{
 	background-image: url('../images/bg2.jpg');
 	background-size: cover;
 }
-.nav-link {
-	color: #fff;
-}
+
 header {
 	margin-bottom: 0;
 }
-.part1{
+.main{
 	margin: 0 auto;
 }
-.part1 .item{
- font-size: 16px;
- color: #fff;
+.main h1{
+	margin: 50px 0;
+	color: #c9ad8d;
+	font-size: 3.5rem;
 }
-.part1 .item h3{
-	height: 60px;
+.main p{
+	color: #c9ad8d;
+	font-size: 1.5rem;
+	text-indent: 4rem;
 }
-.part1 .item p{
-	text-indent: 2rem;
+
+.center{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
 }
-.part1 .item .coinType {
+.imglist{
 	justify-content: space-between;
 }
-.part1 .item .coinType .specailImg,.part1 .item .coinType .specailImg1 {
-	margin-bottom: 30px;
+.imglist>div img{
+	display: block;
 }
-.part1 .item .coinType .specailImg img{
-	height: 110px;
+.nav-link {
+	color: #fff;
 }
-.part1 .item .coinType .specailImg1 img{
-	height: 190px;
+.imglist>div p{
+	text-indent: 0px;
+	text-align: center;
+	margin: 20px 0;
 }
 .row .ite{
 	text-align: center;
@@ -93,6 +100,10 @@ header {
 }
 .layui-layer-setwin .layui-icon-close:before {
     content: "X";
+}
+.col-12 img{
+	max-width: 109%;
+	height: 53%;
 }
 .moeny ul{
 	position: absolute;

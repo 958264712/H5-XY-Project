@@ -1,10 +1,8 @@
 body{
-	background-image: url('../images/bg2.jpg');
+	background-image: url('../images/bg3.jpg');
 	background-size: cover;
 }
-.nav-link {
-	color: #fff;
-}
+
 header {
 	margin-bottom: 0;
 }
@@ -24,18 +22,19 @@ header {
 .part1 .item .coinType {
 	justify-content: space-between;
 }
-.part1 .item .coinType .specailImg,.part1 .item .coinType .specailImg1 {
-	margin-bottom: 30px;
+.part1 .item .coinType .specailImg {
+	margin-bottom: 10px;
 }
 .part1 .item .coinType .specailImg img{
-	height: 110px;
+	height: 220px;
 }
-.part1 .item .coinType .specailImg1 img{
-	height: 190px;
-}
+
 .row .ite{
 	text-align: center;
 	border: none;
+	color: #fff;
+}
+.nav-link {
 	color: #fff;
 }
 .row .ite:hover{
@@ -44,7 +43,7 @@ header {
 .openmodel{
 	display: flex;
 	align-items: center;
-	background-image: url('../images/bg2.jpg');
+	background-image: url('../images/bg3.jpg');
 }
 .openmodel .left{
     width: 700px;
@@ -94,6 +93,11 @@ header {
 .layui-layer-setwin .layui-icon-close:before {
     content: "X";
 }
+
+.imgmodel .row{
+	flex-wrap:nowrap;
+}
+
 .moeny ul{
 	position: absolute;
 	display: none;

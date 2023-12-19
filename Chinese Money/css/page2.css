@@ -8,30 +8,64 @@ body{
 header {
 	margin-bottom: 0;
 }
-.part1{
+.center{
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+.center1 {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.center1 img{
+	width: 52%;
+}
+.main{
 	margin: 0 auto;
 }
-.part1 .item{
- font-size: 16px;
- color: #fff;
+.main h1{
+	margin: 50px 0;
+	color: #c9ad8d;
+	font-size: 3.5rem;
 }
-.part1 .item h3{
-	height: 60px;
+.main h2{
+	color: #c9ad8d;
+	font-size: 2.5rem;
+	text-indent: 20rem;
+	margin-bottom: 20px;
 }
-.part1 .item p{
-	text-indent: 2rem;
+.main p{
+	color: #c9ad8d;
+	font-size: 1.5rem;
+	text-indent: 4rem;
 }
-.part1 .item .coinType {
+@media screen and (max-width : 770px) {
+	.main h2{
+		text-indent: 0px;
+	}
+}
+
+.imglist{
+	margin-top: 50px;
 	justify-content: space-between;
 }
-.part1 .item .coinType .specailImg,.part1 .item .coinType .specailImg1 {
-	margin-bottom: 30px;
+.imglist>div img{
+	display: block;
 }
-.part1 .item .coinType .specailImg img{
-	height: 110px;
+.col-12 img{
+	max-width: 100%;
+	max-height: 100%;
 }
-.part1 .item .coinType .specailImg1 img{
-	height: 190px;
+.imglist>div p{
+	text-indent: 0px;
+	text-align: center;
+	margin: 20px 0;
+}
+
+.why{
+	margin-top: 20px;
 }
 .row .ite{
 	text-align: center;
@@ -44,7 +78,7 @@ header {
 .openmodel{
 	display: flex;
 	align-items: center;
-	background-image: url('../images/bg2.jpg');
+	background-image: url('../images/bg4.jpg');
 }
 .openmodel .left{
     width: 700px;
