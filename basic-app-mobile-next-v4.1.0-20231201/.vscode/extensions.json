@@ -1,0 +1,10 @@
+{
+  "recommendations": [
+    "vue.volar",
+    "vue.vscode-typescript-vue-plugin",
+    "dbaeumer.vscode-eslint",
+    "EditorConfig.EditorConfig",
+    "ZixuanChen.vitest-explorer",
+    "SomewhatStationery.some-sass"
+  ]
+}

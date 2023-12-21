@@ -3,7 +3,7 @@ body {
 	padding: 0;
 	margin: 0;
 	background: #FFF;
-	font-family: 'open Sans', sans-serif;
+	font-family: 'The Wild Breath of Zelda', sans-serif;
 }
 body a {
 	transition: 0.5s all;
@@ -30,7 +30,7 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 	padding: 0;
 	text-align: center;
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'The Wild Breath of Zelda', sans-serif;
 	letter-spacing:1px;
 }
 body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {margin:0; padding:0; border:0; list-style:none;}
@@ -77,11 +77,11 @@ img {
 }
 
 .navbar-default .navbar-nav>li>a {
-	color: #fff;
+	color: #000;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus {
-	color: #FFF;
+	color: #000;
 }
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
     color: #E91E63;
@@ -97,7 +97,7 @@ img {
 	-webkit-transition: color 0.3s;
 	-moz-transition: color 0.3s;
 	transition: color 0.3s;
-	font-family: 'Raleway', sans-serif;
+	font-family: 'The Wild Breath of Zelda', sans-serif;
 }
 
 .hover-effect a::before, .hover-effect a::after {
@@ -311,7 +311,7 @@ padding: 70px 0 165px 0;
     margin-top: 2em;
 }
 .view .mask, .view .content {
-    width: 90%;
+    width: 100%;
     position: absolute;
     overflow: hidden;
     padding: 6.5em 0;
@@ -474,7 +474,7 @@ padding: 70px 0 165px 0;
 
 /*-- services bottom --*/
 .services-bottom-w3-agileits{
-	background:url(../images/sbbg.jpg) no-repeat 0px 0px;
+	background:url(../images/mzl.jpg) no-repeat 0px 0px;
 	background-size:cover;
 	background-attachment:fixed;
 	-webkit-background-size:cover;
@@ -885,7 +885,14 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .team-w3layouts {
     background: #e8e8e8;
 }
-
+.container1{
+	display: flex;
+	width: 1170px;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
 .w3l_team_grid h4{
 	font-size:1.6em;
 	color:#E91E63;
@@ -898,6 +905,9 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .view {
 	overflow: hidden;
     position: relative;
+	height:362px;
+   	width: 24%;
+	margin: 0 10px 10px 0;
 }
 .view-second .mask,.view-second .content {
    position: absolute;
@@ -909,6 +919,8 @@ figure.effect-zoe:hover p.icon-links a:first-child {
 .view img {
    display: block;
    position: relative;
+   height:362px;
+   width: 100%;
 }
 .view-second img {
    -webkit-transition: all 0.2s ease-in;
@@ -1539,7 +1551,7 @@ color:rgb(2, 24, 136) !important;
     padding-left: 2.5em;
     list-style-type: none;
     text-transform: capitalize;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'The Wild Breath of Zelda', sans-serif;
 	text-align:left;
     color: #999;
 	font-size:14px;
@@ -2743,7 +2755,8 @@ color:rgb(2, 24, 136) !important;
     padding: 0px;
     position: relative;
     line-height: 0px;
-	width: 285px
+	width: 285px;
+	height:305px;
 }
 #gamesdome1 li .trend-grid {
     padding: 0 15px;
@@ -2754,8 +2767,7 @@ color:rgb(2, 24, 136) !important;
     margin-bottom: 20px;
 }
 #gamesdome1 li img{
-	width: 100%;
-	height: 100%;
+	max-width: 255px;
 	display: block;
 }
 
@@ -2782,9 +2794,10 @@ color:rgb(2, 24, 136) !important;
 }
 #button{
 	position: absolute;
-	left: 98%;
+	left: 100%;
 	right: 0;
-	top: calc(50% - 30px);
+	top: calc(50% - 10px);
+	background-color: transparent;
 }
 #button li{
 	margin-bottom: 5px;

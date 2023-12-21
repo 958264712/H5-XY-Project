@@ -1,0 +1,17 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "packs/**/*", "packs/**/*.vue"],
+  "exclude": ["src/**/__tests__/*"],
+  "compilerOptions": {
+    "module": "ESNext",
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "vuex": ["./node_modules/vuex/types"]
+    }
+  },
+  "moduleResolution": "node",
+  "resolveJsonModule": true,
+  "isolatedModules": true
+}

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="zh-Hans-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title><%- title %></title>
+    <style type="text/css">
+      html,
+      body {
+        padding: 0;
+        margin: 0;
+        height: 100%;
+        background-color: var(--ui-color-bg-base);
+        box-sizing: border-box;
+      }
+
+      body #app {
+        height: 100%;
+        overflow-y: auto;
+      }
+    <% if (VITE_COMMON_LOADING == "true") { %>
+      #vxbm-loading {
+        position: fixed;
+        background-color: #000;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 0;
+        z-index: 998;
+        opacity: 0.3;
+      }
+      #vxbm-loading img {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        /* width: 1rem; */
+        height: 1rem;
+        z-index: 999;
+      }
+      #vxbm-error {
+        width: 80%;
+        margin: 80px auto;
+        font-size: 14px;
+        display: none;
+      }
+      #vxbm-error img {
+        width: 100%;
+        margin: 80px auto 0 auto;
+      }
+      #vxbm-error .option {
+        width: 80%;
+        margin: -40px auto;
+        text-align: center;
+      }
+      #vxbm-error .option button {
+        background-color: #409eff;
+        border: 1px solid #409eff;
+        color: #fff;
+        padding: 9px 15px;
+        border-radius: 3px;
+      }
+      #vxbm-error .option button:not(:last-child) {
+        margin-right: 10px;
+      }
+      <% } %>
+      </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <% if (VITE_COMMON_LOADING == "true") { %>
+      <div id="vxbm-loading" style="display: none">
+        <div class="mask"></div>
+        <img class="loading" src="<%= PROD ? '../common/loading.gif' : '/loading.gif' %>" alt="" />
+      </div>
+    <% } %>
+    <%- entry %>
+  </body>
+</html>
