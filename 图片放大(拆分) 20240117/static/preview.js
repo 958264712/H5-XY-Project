@@ -13,7 +13,7 @@ function showZoomImg(domName, model) {
   var rightPoint; //右移动范围
   var spin_n = 0; //旋转角度
   var zoom_n = 1; //缩放 放大
-  var ifshow = false; //是否显示隐藏
+  var ifshow = true; //是否显示隐藏
     
   showModel(model); //判断显示方式
 
@@ -81,7 +81,6 @@ function showZoomImg(domName, model) {
       '<div class="mask-layer-R">R</div>' +
       '<div class="img-pre"></div>' +
       '<div class="img-next"></div>' +
-      "<ul class=\"contextmenu\" id='contextmenu'>" +
       "<li>" +
       '<a class="downimg">下载图片</a>' +
       "</li>" +
@@ -118,8 +117,9 @@ function showZoomImg(domName, model) {
       var $div_imgName = $(".mask-layer-imgbox .mask-layer-imgName");
       let list = [$div_close, $div_del, $div_add, $div_R];
       list.map((item) => {
-        item.css({right:'-30px'})
+        item.css({right:'20px'})
       })
+      $div_imgName.css({ bottom: "0px" });
       var $div_img = $(".mask-layer");
       $div_img.on("touchstart", (e) => {
         if (e.target.className !== "mask-layer-R" && e.target.className !== "mask-layer-add" && e.target.className !== "mask-layer-del") {
@@ -150,33 +150,14 @@ function showZoomImg(domName, model) {
 
   /*插件操作*/
   function showCtrl() {
-    //上一张
-    $(".img-pre").on("click", function () {
-      num--;
-      if (num == -1) {
-        num = len - 1;
-      }
-      showImg();
-      showSmallThis(); //显示当前选中
-    });
-    //下一张
-    $(".img-next").on("click", function () {
-      num++;
-      if (num == len) {
-        num = 0;
-        boxReset();
-      }
-      showImg();
-      showSmallThis(); //显示当前选中
-    });
     /*关闭*/
     $(".mask-layer-close").click(function () {
       $(".mask-layer").remove();
     });
-    // 缩小5%
+    // 缩小25%
     $(".mask-layer-del").click(function () {
       // 获取宽度
-      zoom_n -= 0.05
+      zoom_n -= 0.25;
       $(".mask-layer-imgbox img").css({
         transform:
           "translate(-50%, -50%) rotate(" +
@@ -210,10 +191,10 @@ function showZoomImg(domName, model) {
           ")",
       });
     });
-    // 放大5%
+    // 放大25%
     $(".mask-layer-add").click(function () {
       // 获取宽度
-      zoom_n += 0.05;
+      zoom_n += 0.25;
       $(".mask-layer-imgbox img").css({
         transform:
           "translate(-50%, -50%) rotate(" +
@@ -282,64 +263,10 @@ function showZoomImg(domName, model) {
           zoom_n +
           ")",
       });
+      showImg()
+      showSmallThis()
     })
-    /*缩略图操作方法*/
-    if (arrPic.length > 1) {
-      showSmallThis(); //显示当前选中
-    }
-    /*缩略图当前*/
-    function showSmallThis() {
-      //显示当前选中的小图
-      $(".mask-small-img").removeClass("onthis");
-      $($(".mask-small-img")[num]).addClass("onthis");
-      allowShow();
-    }
-
-    /*小图点击切换*/
-    $(".mask-small-img").on("click", function () {
-      num = $(".mask-small-img").index(this);
-      showImg();
-      showSmallThis(); //显示当前选中
-    });
-
-    /*box-go-left 内容向右移动*/
-    $(".box-go-left").on("click", function () {
-      boxGoRight();
-    });
-
-    $(".box-go-right").on("click", function () {
-      boxGoLeft();
-    });
-
-    function boxGoLeft(intTime) {
-      //向左移动
-      intTime ? intTime : (intTime = 1);
-      if (leftPoint > 0) {
-        $(".small-img-box").animate(
-          {
-            left: "-=" + 630 * intTime,
-          },
-          500
-        );
-        leftPoint = leftPoint - intTime;
-        rightPoint = rightPoint + intTime;
-      }
-    }
-
-    function boxGoRight() {
-      //向右移动
-      if (rightPoint > 0) {
-        $(".small-img-box").animate(
-          {
-            left: "+=630",
-          },
-          500
-        );
-        leftPoint++;
-        rightPoint--;
-      }
-    }
-
+    
     function allowShow() {
       //保持选中的图片在容器中能看到
       /*跟随切换*/
@@ -565,44 +492,20 @@ function showZoomImg(domName, model) {
     }
   }
 
-  /*缩略图显示*/
-  function showSmall() {
-    leftPoint = Math.ceil(arrPic.length / 6) - 1;
-    rightPoint = 0;
-
-    $(".mask-layer-imgbox").addClass("has-small");
-    var sDom =
-      "<div class='small-content'><div class='small-img-box'></div></div>";
-    $(".mask-layer-container").append(sDom);
-    /*添加缩略图显示*/
-    for (var i = 0; i < arrPic.length; i++) {
-      $(".small-img-box").append(
-        '<img class="mask-small-img" src=' + arrPic[i] + ">"
-      );
-    }
-    if (arrPic.length > 6) {
-      //大于六张出现左右移动按钮
-      $(".small-img-box").width(Math.ceil(arrPic.length / 6) * 630);
-      $(".small-content").append(
-        '<span class="box-go-left"></span><span class="box-go-right"></span>'
-      );
-    }
-  }
-
   // 手机端时隐藏
   function showdome(list,dome) {
-    if (ifshow) {
-      list.map(item => {
-        item.css({right:'-30px'})
-      })
-      dome.css({ bottom: '-30px' })
-      ifshow = false
-    } else {
+    if (!ifshow) {
       list.map((item) => {
         item.css({ right: "20px" });
       });
       dome.css({ bottom: "0px" });
       ifshow = true
+    } else {
+      list.map((item) => {
+        item.css({ right: "-30px" });
+      });
+      dome.css({ bottom: "-30px" });
+      ifshow = false
     }
     
   }

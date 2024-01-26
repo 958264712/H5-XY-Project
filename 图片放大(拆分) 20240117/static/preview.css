@@ -25,54 +25,27 @@
   -ms-user-select: none;
   user-select: none;
 }
-
-.mask-layer .mask-layer-close {
+.mask-layer .mask-layer-close, .mask-layer .mask-layer-del, .mask-layer .mask-layer-add, .mask-layer .mask-layer-R {
   position: absolute;
-  top: 20px;
   right: 20px;
   width: 32px;
   height: 32px;
   color: #fff;
-  /* background: url(/static/buy/images/closeicon.png) no-repeat center center; */
   background-size: cover;
   text-align: center;
   cursor: pointer;
+}
+.mask-layer .mask-layer-close {
+  top: 20px;
 }
 .mask-layer .mask-layer-del {
-  position: absolute;
   top: 50px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  color: #fff;
-  font-size: 28px;
-  background-size: cover;
-  cursor: pointer;
-  text-align: center;
 }
 .mask-layer .mask-layer-add {
-  position: absolute;
   top: 80px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  color: #fff;
-  font-size: 28px;
-  text-align: center;
-  background-size: cover;
-  cursor: pointer;
 }
-.mask-layer .mask-layer-R{
-  position: absolute;
+.mask-layer .mask-layer-R {
   top: 110px;
-  right: 20px;
-  width: 32px;
-  height: 32px;
-  color: #fff;
-  font-size: 24px;
-  text-align: center;
-  background-size: cover;
-  cursor: pointer;
 }
 .mask-layer-black {
   width: 100%;
@@ -174,10 +147,6 @@
   }
 }
 
-/* .mask-layer-imgbox:hover .mask-layer-imgName {
-  bottom: 0px;
-} */
-
 .mask-layer-imgbox .layer-img-box {
   position: relative;
   width: 100%;
@@ -223,38 +192,4 @@
 }
 .zoomImg-hide-box {
   display: none !important;
-}
-/*右键菜单*/
-.mask-layer .contextmenu {
-  list-style: none;
-  display: none;
-  position: absolute;
-  width: 180px;
-  background: #ffffff;
-  border-radius: 5px;
-  z-index: 99;
-  border: 1px solid #333;
-}
-
-.mask-layer .contextmenu li {
-  transition: ease 0.3s;
-}
-
-.mask-layer .contextmenu li:hover {
-  background: #333333;
-}
-
-.mask-layer .contextmenu li > a {
-  display: block;
-  padding: 10px 10px 10px 35px;
-  color: #000000;
-  text-decoration: none;
-  transition: ease 0.3s;
-}
-
-.mask-layer .contextmenu li:hover > a {
-  color: #ffffff;
-}
-.mask-layer .contextmenu .menu-parend:hover .menu-child {
-  display: block;
 }
