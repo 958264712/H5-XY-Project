@@ -34,7 +34,7 @@
                         </div>
                     </div>
                     <!-- Enter room type and number  -->
-                    <div class="column">
+                    <div>
                         <h4 class="titleRequired">Rooms<span>*</span></h4>
                         <div class="labelItem">
                             <!-- User Single Input -->
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                     <!-- Enter the guest type and number  -->
-                    <div class="column">
+                    <div >
                         <h4 class="titleRequired">Guests<span>*</span></h4>
                         <div class="labelItem">
                             <!-- User Aduits Input -->
@@ -69,13 +69,13 @@
                 <button type="button" id="CalculateBtn">Calculate</button><span id="computed">Total cost = ￥<span
                         id="computedCost">1000</span></span>
             </form>
-            <img src="./images/char.png" alt="char" style="height: 100%; width: 25%; position: absolute; top: 6%; left: -25%;"/>
+            <img src="./images/char.png" alt="char" id="char" style="height: 100%; width: 25%; position: absolute; top: 6%; left: -25%;"/>
         </div>
         <div class="container " id="hidden">
             <form id="cardForm">
                 <h3>Payment information</h3>
                 <section id="reservationDetails">
-                    <div class="detailsItem">
+                    <div class="details">
                         <div>
                             <!-- User Title Input -->
                             <label for="userTitle" class="titleRequired">Title<span>*</span></label>
@@ -89,18 +89,18 @@
                         </div>
                         <div>
                             <label for="userCardType" class="titleRequired">Card type<span>*</span></label>
-                            <div class="flex">
-                                <input type="radio" id="up" name="pay" value="up" /><label for="up"><img
-                                        src="./images/up.png" alt="up" /></label>
-                                <input type="radio" id="visa" name="pay" value="visa" /><label for="visa"><img
-                                        src="./images/visa.png" alt="visa" /></label>
-                                <input type="radio" id="mc" name="pay" value="mc" /><label
-                                    for="mc"><img src="./images/mc.png" alt="mc" /></label>
-                            </div>
+                            <div class="gird">
+                                <div class="flex"> <input type="radio" id="up" name="pay" value="up" /><label for="up"><img
+                                        src="./images/up.png" alt="up" /></label></div>
+                                <div class="flex"> <input type="radio" id="visa" name="pay" value="visa" /><label for="visa"><img
+                                        src="./images/visa.png" alt="visa" /></label></div>
+                                <div class="flex"><input type="radio" id="mc" name="pay" value="mc" /><label
+                                    for="mc"><img src="./images/mc.png" alt="mc" /></label></div>
+                             </div>
                             <p id="required15">Please select your card type</p>
                         </div>
                     </div>
-                    <div class="detailsItem">
+                    <div class="details">
                         <div>
                             <!-- User First Name Input -->
                             <label for="userFirstName" class="titleRequired">First Name<span>*</span></label>
@@ -114,7 +114,7 @@
                             <p id="required8">Please enter card holder name</p>
                         </div>
                     </div>
-                    <div class="detailsItem">
+                    <div class="details">
                         <div>
                             <!-- User Last Name Input -->
                             <label for="userLastName" class="titleRequired">Last Name<span>*</span></label>
@@ -128,7 +128,7 @@
                             <p id="required10">Must be a 16 digit number</p>
                         </div>
                     </div>
-                    <div class="detailsItem">
+                    <div class="details">
                         <div>
                             <!-- User Email Input -->
                             <label for="userEmail" class="titleRequired">Email address<span>*</span></label>
@@ -142,7 +142,7 @@
                             <p id="required16">Please select a correct year and month</p>
                         </div>
                     </div>
-                    <div class="detailsItem">
+                    <div class="details">
                         <div>
                             <!-- User Phone Number Input -->
                             <label for="userPhoneNumber" class="titleRequired">Phone number<span>*</span></label>
@@ -162,7 +162,7 @@
                     <!-- Pay Now Button -->
                     <button type="button" id="payNowButton">Pay Now</button>
             </form>
-            <img src="./images/alas.png" alt="alas" style="height: 74%; width: 25%; position: absolute; top: 28%; right: -29%;"/>
+            <img src="./images/alas.png" alt="alas" id="alas" style="height: 74%; width: 25%; position: absolute; top: 28%; right: -29%;"/>
         </div>
         <footer>
             Copyright &copy;2024 COMPX222

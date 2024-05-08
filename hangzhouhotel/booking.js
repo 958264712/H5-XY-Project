@@ -340,3 +340,23 @@ function validFun() {
     t14 = true;
   }
 }
+
+function handleResize() {
+  if (window.innerWidth < 1400) {
+    document.getElementById('left').style.display = "none"
+  } else {
+    document.getElementById("left").style.display = "block";
+  }
+  if (window.innerWidth < 1000) {
+    document.getElementById("right").style.display = "none";
+    document.getElementById("right1").style.display = "none";
+  } else {
+    document.getElementById("right").style.display = "block";
+    document.getElementById("right1").style.display = "block";
+  }
+}
+
+window.addEventListener("load", function () {
+  handleResize();
+});
+window.addEventListener("resize", handleResize);

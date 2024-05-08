@@ -325,3 +325,20 @@ payNowButton.addEventListener("click", () => {
     alert("Booking Successful!");
   }
 });
+function handleResize() {
+  if (window.innerWidth < 1400) {
+    document.getElementById("char").style.display = "none";
+  } else {
+    document.getElementById("char").style.display = "block";
+  }
+  if (window.innerWidth < 1000) {
+    document.getElementById("alas").style.display = "none";
+  } else {
+    document.getElementById("alas").style.display = "block";
+  }
+}
+
+window.addEventListener("load", function () {
+  handleResize();
+});
+window.addEventListener("resize", handleResize);

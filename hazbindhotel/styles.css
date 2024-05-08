@@ -23,8 +23,6 @@ img {
 body {
   font-family: "Algerian", sans-serif;
   font-size: 12px;
-}
-body {
   background-color: #841b20;
   box-sizing: border-box;
 }
@@ -70,13 +68,10 @@ input[type="number"] {
   background-color: #265eb0;
 }
 #bookingDetails {
-  display: flex;
+   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   width: 100%;
-  justify-content: space-between;
   margin-top: 40px;
-}
-#bookingDetails .column {
-  width: 25%;
 }
 #bookingDetails .titleRequired,
 #reservationDetails .titleRequired {
@@ -92,9 +87,7 @@ input[type="number"] {
 #bookingDetails .labelItem {
   margin-bottom: 10px;
 }
-#bookingDetails div:first-child {
-  width: 35%;
-}
+
 #bookingDetails .labelItem label {
   font-size: 16px;
 }
@@ -102,7 +95,7 @@ input[type="number"] {
 #bookingDetails .labelItem input[type="number"] {
   display: block;
   margin: 10px 0;
-  width: 100%;
+  width: 80%;
   height: 30px;
   padding: 10px;
 }
@@ -111,45 +104,47 @@ input[type="number"] {
   color:#fcfbfb ;
 
 }
-#reservationDetails .detailsItem {
-  display: flex;
+#reservationDetails .details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   justify-content: space-between;
   align-items: center;
   margin-bottom: 5px;
 }
-#reservationDetails .detailsItem > div {
-  width: 45%;
-}
-#reservationDetails .detailsItem select {
+#reservationDetails .details select {
   display: block;
   margin: 10px 0;
   width: 40%;
   height: 50px;
   padding: 10px;
 }
-#reservationDetails .detailsItem .titleRequired {
+#reservationDetails .details .titleRequired {
   font-weight: bold;
 }
-#reservationDetails .detailsItem input {
+#reservationDetails .details input {
   display: block;
   margin: 10px 0;
   width: 80%;
   height: 30px;
   padding: 10px;
 }
-#reservationDetails .detailsItem .flex {
+#reservationDetails .details .gird {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+#reservationDetails .details .flex {
   display: flex;
   align-items: center;
 }
-#reservationDetails .detailsItem .flex img{
+#reservationDetails .details .flex img{
   width: 90%;
   height: 90%;
 }
-#reservationDetails .detailsItem .flex input {
+#reservationDetails .details .flex input {
   width: 15px;
   margin-right: 10px;
 }
-#reservationDetails .detailsItem .flex label {
+#reservationDetails .details .flex label {
   display: block;
   margin-right: 20px;
 }
@@ -165,7 +160,7 @@ input[type="number"] {
 button {
   color: white;
   cursor: pointer;
-  width: 8%;
+  width: 80px;
   border: none;
   height: 40px;
   margin-right: 20px;
