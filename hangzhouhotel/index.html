@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lakers Hotel </title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <h1>Lakers Hotel</h1>
+    <div class="formBody">
+        <div class="formcontainer">
+            <form id="booking">
+                <h3>Booking details</h3>
+                <section id="bookingDetails">
+                    <!-- Enter check-in and departure times -->
+                    <div>
+                        <h4 class="titlereg">Dates<span>*</span></h4>
+                        <div class="labelItem">
+                            <!--  Arrival Input -->
+                            <label for="Arrival">Arrival</label>
+                            <input type="date" id="Arrival" required />
+                            <p id="reg1">Please enter check-in time</p>
+                        </div>
+                        <div class="labelItem">
+                            <!--  Departure Input -->
+                            <label for="Departure">Departure</label>
+                            <input type="date" id="Departure" required />
+                            <p id="reg2">Please enter departure time</p>
+                        </div>
+                    </div>
+                    <!-- Enter room type and number  -->
+                    <div class="column">
+                        <h4 class="titlereg">Rooms<span>*</span></h4>
+                        <div class="labelItem">
+                            <!--  Single Input -->
+                            <label for="Single">Single(￥200)</label>
+                            <input type="number" id="Single" value="0" min="0" required />
+                            <p id="reg3">It must be a number and greater than 1</p>
+                        </div>
+                        <div class="labelItem">
+                            <!--  Double Input -->
+                            <label for="Double">Double(￥300)</label>
+                            <input type="number" id="Double" value="0" min="0" required />
+                            <p id="reg4">It must be a number and greater than 1</p>
+                        </div>
+                    </div>
+                    <!-- Enter the guest type and number  -->
+                    <div class="column">
+                        <h4 class="titlereg">Guests<span>*</span></h4>
+                        <div class="labelItem">
+                            <!--  Aduits Input -->
+                            <label for="Aduits">Aduits</label>
+                            <input type="number" id="Aduits" value="0" min="0" required />
+                            <p id="reg5">It must be a number and greater than 1</p>
+                        </div>
+                        <div class="labelItem">
+                            <!--  Children Input -->
+                            <label for="Children">Children</label>
+                            <input type="number" id="Children" value="0" min="0" required />
+                            <p id="reg6">It must be a number and greater than 1</p>
+                        </div>
+                    </div>
+                </section>
+                <button type="button" id="CalculateBtn">Calculate</button>
+                <div id="computedDiv">Total cost = ￥<span id="cost">1000</span></div>
+            </form>
+            <img src="./images/two.png" alt="kobe" class="left">
+            <img src="./images/one.png" alt="kobe" class="right">
+        </div>
+        <div class="formcontainer " id="hidden">
+            <form id="cardForm">
+                <h3>Payment information</h3>
+                <section id="reservation">
+                    <div class="detailsItem">
+                        <div>
+                            <!--  Title Input -->
+                            <label for="Title" class="titlereg">Title<span>*</span></label>
+                            <select id="Title" required>
+                                <option value=""></option>
+                                <option value="mr">Mr</option>
+                                <option value="mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                            </select>
+                            <p id="reg14">Please enter null</p>
+                        </div>
+                        <div>
+                            <label for="CardType" class="titlereg">Card type<span>*</span></label>
+                            <div class="flex">
+                                <input type="radio" id="payOne" name="pay" value="payOne" /><label for="payOne"><img
+                                        src="./images/payOne.jpg" alt="payOne" /></label>
+                                <input type="radio" id="payTwo" name="pay" value="payTwo" /><label for="payTwo"><img
+                                        src="./images/payTwo.jpg" alt="payTwo" /></label>
+                                <input type="radio" id="payThree" name="pay" value="payThree" /><label
+                                    for="payThree"><img src="./images/payThree.jpg" alt="payThree" /></label>
+                            </div>
+                            <p id="reg15">Please select your card type</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!--  First Name Input -->
+                            <label for="FirstName" class="titlereg">First Name<span>*</span></label>
+                            <input type="text" id="FirstName" placeholder="First Name" required />
+                            <p id="reg7">Please enter first name</p>
+                        </div>
+                        <div>
+                            <!--  Cardholder Name Input -->
+                            <label for="CardholderName" class="titlereg">Cardholder name<span>*</span></label>
+                            <input type="text" id="CardholderName" required />
+                            <p id="reg8">Please enter card holder name</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!--  Last Name Input -->
+                            <label for="LastName" class="titlereg">Last Name<span>*</span></label>
+                            <input type="text" id="LastName" placeholder="Last Name" required />
+                            <p id="reg9">Please enter last name</p>
+                        </div>
+                        <div>
+                            <!--  Card Number Input -->
+                            <label for="CardNumber" class="titlereg">Card number</label>
+                            <input type="text" id="CardNumber" required />
+                            <p id="reg10">Must be a 16 digit number</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!--  Email Input -->
+                            <label for="Email" class="titlereg">Email address<span>*</span></label>
+                            <input type="email" id="Email" placeholder="aa@gmail.com" required />
+                            <p id="reg11">Your email format is not correct</p>
+                        </div>
+                        <div>
+                            <!--  Card Expiration Input -->
+                            <label for="CardExpiration" class="titlereg">Card expiration<span>*</span></label>
+                            <input type="month" id="CardExpiration" required />
+                            <p id="reg16">Please select a correct year and month</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!--  Phone Number Input -->
+                            <label for="PhoneNumber" class="titlereg">Phone number<span>*</span></label>
+                            <input type="tel" id="PhoneNumber" pattern="[0-9]{11}" placeholder="Your Phone Number"
+                                reg />
+                            <p id="reg12">Your phone number is not in correct format</p>
+                        </div>
+                        <div>
+                            <!-- CVV Input -->
+                            <label for="cvv" class="titlereg">CVV<span>*</span></label>
+                            <input type="text" id="cvv" pattern="[0-9]{3}" maxlength="3" required />
+                            <p id="reg13">3 digit code on back of the card</p>
+                        </div>
+                    </div>
+                    <!-- Cancel Button -->
+                    <button type="button" id="cancelButton">Cancel</button>
+                    <!-- Pay Now Button -->
+                    <button type="button" id="payNowButton">Pay Now</button>
+            </form>
+             <img src="./images/three.png" alt="LeBorn" class="right1">
+        </div>
+        <div id="footer">
+            Copyright &copy;2024 COMPX222
+        </div>
+    </div>
+    <script src="./booking.js"></script>
+</body>
+
+</html>
