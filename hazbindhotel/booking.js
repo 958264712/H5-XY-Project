@@ -31,15 +31,34 @@ function calculateStayDuration(checkInDate, checkOutDate) {
   var endDate = new Date(checkOutDate);
   //Calculate the time difference between two dates, and the result is in milliseconds
   var timeDifference = endDate.getTime() - startDate.getTime();
+  if (timeDifference === 0) {
+    timeDifference = 1;
+  }
   // Convert the time difference to days
   var daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
   return daysDifference;
 }
 
+var today = new Date();
+today.setHours(0, 0, 0, 0); // Ensure that the date is 0 o 'clock on the same day to avoid time zone problems
+var formattedToday = today.toISOString().split("T")[0]; // Convert the format to YYYY-MM-DD
+// Get the input element and set the min attribute
+userArrival.min = formattedToday;
+
+userArrival.addEventListener("change", () => {
+  var startDate = userArrival.value;
+  if (startDate) {
+    userDeparture.min = startDate;
+  } else {
+    userDeparture.min = "";
+  }
+});
+
 // Add check-in message event listening
 CalculateBtn.addEventListener("click", () => {
   // Check-in time verification
   var t1, t2, t3, t4;
+
   if (userArrival.value.trim() === "") {
     document.getElementById("required1").style.opacity = 1;
     t1 = false;
@@ -216,12 +235,21 @@ radios.forEach(function (radio) {
   });
 });
 userCardExpiration.addEventListener("blur", () => {
+  // Get current date
+  var currentDate = new Date();
+  var currentMonth = currentDate.getMonth() + 1; // getMonth() add one
+  var userCardholderName = userCardExpiration.value.split("-"); // It is divided into years and months
+  var selectedMonth = parseInt(userCardholderName[1], 10); // Convert to an integer
   if (userCardExpiration.value.trim() === "") {
     document.getElementById("required16").style.opacity = 1;
     t14 = false;
   } else {
     document.getElementById("required16").style.opacity = 0;
     t14 = true;
+  }
+  if (selectedMonth < currentMonth) {
+    alert("your card is expired");
+    userCardExpiration.value = "";
   }
 });
 cancelButton.addEventListener("click", () => {
@@ -230,16 +258,16 @@ cancelButton.addEventListener("click", () => {
   form.reset();
   hid.style.display = "none";
   computed.style.display = "none";
-  document.getElementById("reg7").style.opacity = 0;
-  document.getElementById("reg8").style.opacity = 0;
-  document.getElementById("reg9").style.opacity = 0;
-  document.getElementById("reg10").style.opacity = 0;
-  document.getElementById("reg11").style.opacity = 0;
-  document.getElementById("reg12").style.opacity = 0;
-  document.getElementById("reg13").style.opacity = 0;
-  document.getElementById("reg14").style.opacity = 0;
-  document.getElementById("reg15").style.opacity = 0;
-  document.getElementById("reg16").style.opacity = 0;
+  document.getElementById("required7").style.opacity = 0;
+  document.getElementById("required8").style.opacity = 0;
+  document.getElementById("required9").style.opacity = 0;
+  document.getElementById("required10").style.opacity = 0;
+  document.getElementById("required11").style.opacity = 0;
+  document.getElementById("required12").style.opacity = 0;
+  document.getElementById("required13").style.opacity = 0;
+  document.getElementById("required14").style.opacity = 0;
+  document.getElementById("required15").style.opacity = 0;
+  document.getElementById("required16").style.opacity = 0;
 });
 
 // Determine whether the payment is valid

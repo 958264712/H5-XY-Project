@@ -27,21 +27,38 @@ const hid = document.getElementById("hidden");
 
 var t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14;
 
-
-function calculateStayDuration(checkInDate, checkOutDate) {
+function stayDuration(inDate, outDate) {
   // Converts a Date in string format to a date object
-  var startDate = new Date(checkInDate);
-  var endDate = new Date(checkOutDate);
+  var start = new Date(inDate);
+  var end = new Date(outDate);
   //Calculate the time difference between two dates, and the result is in milliseconds
-  var timeDifference = endDate.getTime() - startDate.getTime();
+  var time = end.getTime() - start.getTime();
+  if (time === 0) {
+    time = 1;
+  }
   // Convert the time difference to days
-  var daysDifference = Math.ceil(timeDifference / (1000 * 3600 * 24));
-  return daysDifference;
+  var days = Math.ceil(time / (1000 * 3600 * 24));
+  return days;
 }
+
+var today = new Date();
+var twoMonth = today.getMonth() + 1;
+
+today.setHours(0, 0, 0, 0);
+var formatted = today.toISOString().split("T")[0];
+Arrival.min = formatted;
+Arrival.addEventListener("change", () => {
+  var start = Arrival.value;
+  if (start) {
+    Departure.min = start;
+  } else {
+    Departure.min = "";
+  }
+});
 
 // Add check-in message event listening
 CalculateBtn.addEventListener("click", () => {
-  verification()
+  verification();
   if (t1 && t2 && t3 && t4) {
     var single = 0,
       double = 0,
@@ -53,7 +70,7 @@ CalculateBtn.addEventListener("click", () => {
       double = 300 * Double.value;
     }
     if (Arrival.value.tirm !== 0 && Departure.value.tirm !== 0) {
-      dateNum = calculateStayDuration(Arrival.value, Departure.value);
+      dateNum = stayDuration(Arrival.value, Departure.value);
     }
     cost.innerText = single * dateNum + double * dateNum;
     computedDiv.style.display = "inline-block";
@@ -193,6 +210,8 @@ inputsAndSelects.forEach((item) => {
       }
     }
     if (item.id === "CardExpiration") {
+      var card = CardExpiration.value.split("-");
+      var oneMonth = parseInt(card[1], 10);
       if (CardExpiration.value.trim() === "") {
         document.getElementById("reg16").style.opacity = 1;
         t14 = false;
@@ -200,8 +219,11 @@ inputsAndSelects.forEach((item) => {
         document.getElementById("reg16").style.opacity = 0;
         t14 = true;
       }
+      if (oneMonth < twoMonth) {
+        alert("your card is expired");
+        CardExpiration.value = "";
+      }
     }
-    
   });
 });
 
@@ -235,7 +257,6 @@ radios.forEach(function (radio) {
   });
 });
 
-
 cancelButton.addEventListener("click", () => {
   // Clear form data
   booking.reset();
@@ -250,13 +271,13 @@ cancelButton.addEventListener("click", () => {
   document.getElementById("reg12").style.opacity = 0;
   document.getElementById("reg13").style.opacity = 0;
   document.getElementById("reg14").style.opacity = 0;
- document.getElementById("reg15").style.opacity = 0;
+  document.getElementById("reg15").style.opacity = 0;
   document.getElementById("reg16").style.opacity = 0;
 });
 
 // Determine whether the payment is valid
 payNowButton.addEventListener("click", () => {
-  validFun()
+  validFun();
   if (t5 && t6 && t7 && t8 && t9 && t10 && t11 && t12 && t13 && t14) {
     alert("Booking Successful!");
   }
@@ -332,6 +353,7 @@ function validFun() {
     document.getElementById("reg13").style.opacity = 0;
     t11 = true;
   }
+
   if (CardExpiration.value.trim() === "") {
     document.getElementById("reg16").style.opacity = 1;
     t14 = false;
@@ -343,7 +365,7 @@ function validFun() {
 
 function handleResize() {
   if (window.innerWidth < 1400) {
-    document.getElementById('left').style.display = "none"
+    document.getElementById("left").style.display = "none";
   } else {
     document.getElementById("left").style.display = "block";
   }
