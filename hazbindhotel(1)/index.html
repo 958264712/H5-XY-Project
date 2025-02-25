@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangzhou Hotel Booking</title>
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+    <h1>
+       Hangzhou Hotel
+    </h1>
+    <div class="body">
+        <div class="container">
+            <form id="bookingForm">
+                <h3>Booking details</h3>
+                <section id="bookingDetails">
+                    <!-- Enter check-in and departure times -->
+                    <div>
+                        <h4 class="titleRequired">Dates<span>*</span></h4>
+                        <div class="labelItem">
+                            <!-- User Arrival Input -->
+                            <label for="userArrival">Arrival</label>
+                            <input type="date" id="userArrival" required />
+                            <p id="required1">Please enter check-in time</p>
+                        </div>
+                        <div class="labelItem">
+                            <!-- User Departure Input -->
+                            <label for="userDeparture">Departure</label>
+                            <input type="date" id="userDeparture" required />
+                            <p id="required2">Please enter departure time</p>
+                        </div>
+                    </div>
+                    <!-- Enter room type and number  -->
+                    <div class="column">
+                        <h4 class="titleRequired">Rooms<span>*</span></h4>
+                        <div class="labelItem">
+                            <!-- User Single Input -->
+                            <label for="userSingle">Single(￥200)</label>
+                            <input type="number" id="userSingle" value="0" min="0" required />
+                            <p id="required3">It must be a number and greater than 1</p>
+                        </div>
+                        <div class="labelItem">
+                            <!-- User Double Input -->
+                            <label for="userDouble">Double(￥300)</label>
+                            <input type="number" id="userDouble" value="0" min="0" required />
+                            <p id="required4">It must be a number and greater than 1</p>
+                        </div>
+                    </div>
+                    <!-- Enter the guest type and number  -->
+                    <div class="column">
+                        <h4 class="titleRequired">Guests<span>*</span></h4>
+                        <div class="labelItem">
+                            <!-- User Aduits Input -->
+                            <label for="userAduits">Aduits</label>
+                            <input type="number" id="userAduits" value="0" min="0" required />
+                            <p id="required5">It must be a number and greater than 1</p>
+                        </div>
+                        <div class="labelItem">
+                            <!-- User Children Input -->
+                            <label for="userChildren">Children</label>
+                            <input type="number" id="userChildren" value="0" min="0" required />
+                            <p id="required6">It must be a number and greater than 1</p>
+                        </div>
+                    </div>
+                </section>
+                <button type="button" id="CalculateBtn">Calculate</button><span id="computed">Total cost = ￥<span
+                        id="computedCost">1000</span></span>
+            </form>
+        </div>
+        <div class="container " id="hidden">
+            <form id="cardForm">
+                <h3>Payment information</h3>
+                <section id="reservationDetails">
+                    <div class="detailsItem">
+                        <div>
+                            <!-- User Title Input -->
+                            <label for="userTitle" class="titleRequired">Title<span>*</span></label>
+                            <select id="userTitle" required>
+                                <option value=""></option>
+                                <option value="mr">Mr</option>
+                                <option value="mrs">Mrs</option>
+                                <option value="Miss">Miss</option>
+                            </select>
+                            <p id="required14">Please enter null</p>
+                        </div>
+                        <div>
+                            <label for="userCardType" class="titleRequired">Card type<span>*</span></label>
+                            <div class="flex">
+                                <input type="radio" id="up" name="pay" value="up" /><label for="up"><img
+                                        src="./images/up.png" alt="up" /></label>
+                                <input type="radio" id="visa" name="pay" value="visa" /><label for="visa"><img
+                                        src="./images/visa.png" alt="visa" /></label>
+                                <input type="radio" id="mc" name="pay" value="mc" /><label
+                                    for="mc"><img src="./images/mc.png" alt="mc" /></label>
+                            </div>
+                            <p id="required15">Please select your card type</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!-- User First Name Input -->
+                            <label for="userFirstName" class="titleRequired">First Name<span>*</span></label>
+                            <input type="text" id="userFirstName" placeholder="First Name" required />
+                            <p id="required7">Please enter first name</p>
+                        </div>
+                        <div>
+                            <!-- User Cardholder Name Input -->
+                            <label for="userCardholderName" class="titleRequired">Cardholder name<span>*</span></label>
+                            <input type="text" id="userCardholderName" required />
+                            <p id="required8">Please enter card holder name</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!-- User Last Name Input -->
+                            <label for="userLastName" class="titleRequired">Last Name<span>*</span></label>
+                            <input type="text" id="userLastName" placeholder="Last Name" required />
+                            <p id="required9">Please enter last name</p>
+                        </div>
+                        <div>
+                            <!-- User Card Number Input -->
+                            <label for="userCardNumber" class="titleRequired">Card number</label>
+                            <input type="text" id="userCardNumber" required />
+                            <p id="required10">Must be a 16 digit number</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!-- User Email Input -->
+                            <label for="userEmail" class="titleRequired">Email address<span>*</span></label>
+                            <input type="email" id="userEmail" placeholder="aa@gmail.com" required />
+                            <p id="required11">Your email format is not correct</p>
+                        </div>
+                        <div>
+                            <!-- User Card Expiration Input -->
+                            <label for="userCardExpiration" class="titleRequired">Card expiration<span>*</span></label>
+                            <input type="month" id="userCardExpiration" required />
+                            <p id="required16">Please select a correct year and month</p>
+                        </div>
+                    </div>
+                    <div class="detailsItem">
+                        <div>
+                            <!-- User Phone Number Input -->
+                            <label for="userPhoneNumber" class="titleRequired">Phone number<span>*</span></label>
+                            <input type="tel" id="userPhoneNumber" pattern="[0-9]{11}" placeholder="Your Phone Number"
+                                required />
+                            <p id="required12">Your phone number is not in correct format</p>
+                        </div>
+                        <div>
+                            <!-- CVV Input -->
+                            <label for="cvv" class="titleRequired">CVV<span>*</span></label>
+                            <input type="text" id="cvv" pattern="[0-9]{3}" maxlength="3" required />
+                            <p id="required13">3 digit code on back of the card</p>
+                        </div>
+                    </div>
+                    <!-- Cancel Button -->
+                    <button type="button" id="cancelButton">Cancel</button>
+                    <!-- Pay Now Button -->
+                    <button type="button" id="payNowButton">Pay Now</button>
+            </form>
+        </div>
+        <footer>
+            Copyright &copy;2024 COMPX222
+        </footer>
+    </div>
+    <script src="./booking.js"></script>
+</body>
+
+</html>
